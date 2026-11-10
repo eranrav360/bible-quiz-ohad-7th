@@ -1,0 +1,1021 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>שמואל א׳ – תרגול למבחן</title>
+<meta name="description" content="תרגול למבחן בתנ״ך: שמואל א׳ פרק א׳ ופרק ב׳ פסוקים י״א–ל״ו. שאלות מגוונות עם משוב והסברים.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4eee2; --surface:#fffdf8; --surface-2:#f3ead8; --ink:#1c2640; --muted:#636b7c; --line:#e3d7c0;
+  --primary:#23507a; --primary-ink:#ffffff; --primary-soft:#e1ebf5;
+  --accent:#c2742a; --accent-ink:#8a4b12; --accent-soft:#f6e4cc;
+  --ok:#2b7a4b; --ok-soft:#ddf1e4; --bad:#b5392d; --bad-soft:#f8dfda; --warn:#9a6200; --warn-soft:#fbeed2;
+  --verse:#3a2d1b;
+  --shadow:0 1px 2px rgba(50,35,10,.06),0 8px 24px rgba(50,35,10,.08);
+  --r:14px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#14161b; --surface:#1d2129; --surface-2:#262b35; --ink:#ece6d9; --muted:#a2a8b5; --line:#343a48;
+    --primary:#86b6e2; --primary-ink:#0d1a27; --primary-soft:#1f3347;
+    --accent:#e3a660; --accent-ink:#f0c58f; --accent-soft:#3a2b18;
+    --ok:#6fcb95; --ok-soft:#173026; --bad:#f08b7f; --bad-soft:#3b1e1b; --warn:#e8b95c; --warn-soft:#352a13;
+    --verse:#efe2c6;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Rubik','Arial Hebrew',Arial,sans-serif;font-size:17px;line-height:1.55}
+button,select,textarea,input{font:inherit;color:inherit}
+button{cursor:pointer}
+.wrap{max-width:780px;margin:0 auto;padding:20px 16px 72px}
+.v{font-family:'Frank Ruhl Libre','David','Times New Roman',serif;font-size:1.1em;font-weight:500}
+
+/* ---------- home ---------- */
+.hero{position:relative;overflow:hidden;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px 24px 24px;box-shadow:var(--shadow)}
+.hero::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:linear-gradient(90deg,var(--accent),var(--primary))}
+.kicker{font-size:.85rem;font-weight:600;letter-spacing:.02em;color:var(--accent-ink)}
+.hero h1{font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:clamp(2rem,6vw,2.8rem);line-height:1.15;margin:6px 0 8px}
+.hero p{margin:0;color:var(--muted)}
+.scope{margin-top:18px;padding:14px 16px;background:var(--surface-2);border-radius:var(--r)}
+.scope h2{font-size:1rem;margin:0 0 8px}
+.scope ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.scope li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:.9rem}
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 26px}
+.mode{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:right;padding:16px 18px;border-radius:var(--r);border:0;background:var(--primary);color:var(--primary-ink);box-shadow:var(--shadow);transition:transform .15s}
+.mode.alt{background:var(--surface);color:var(--ink);border:2px solid var(--primary)}
+.mode:hover{transform:translateY(-2px)}
+.mode b{font-size:1.15rem}
+.mode span{font-size:.9rem;opacity:.85}
+.h-sec{font-size:1.05rem;margin:0 0 10px;color:var(--muted);font-weight:600}
+.secs{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.sec{display:flex;gap:12px;align-items:flex-start;text-align:right;padding:14px;border-radius:var(--r);border:1px solid var(--line);background:var(--surface);box-shadow:0 1px 2px rgba(0,0,0,.04);transition:border-color .15s,transform .15s}
+.sec:hover{border-color:var(--accent);transform:translateY(-2px)}
+.letter{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent-ink);font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:1.3rem}
+.sec .t{font-weight:600;line-height:1.3}
+.sec .m{font-size:.84rem;color:var(--muted);margin-top:2px}
+.sec .last{display:inline-block;margin-top:6px;font-size:.78rem;font-weight:600;padding:1px 8px;border-radius:999px;background:var(--ok-soft);color:var(--ok)}
+.tip{margin-top:24px;font-size:.9rem;color:var(--muted);text-align:center}
+
+/* ---------- quiz ---------- */
+.qtop{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}
+.link{background:none;border:0;color:var(--primary);font-weight:600;padding:6px 0}
+.qcount{font-size:.9rem;color:var(--muted);font-weight:500}
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin-bottom:16px}
+.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--primary),var(--accent));border-radius:99px;transition:width .4s}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px 20px;box-shadow:var(--shadow);animation:in .3s ease}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.qmeta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.chip{display:inline-block;font-size:.8rem;font-weight:600;padding:4px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent-ink)}
+.secname{font-size:.82rem;color:var(--muted)}
+.prompt{font-size:1.22rem;font-weight:600;line-height:1.5;margin:14px 0 10px}
+.verse{margin:0 0 14px;font-family:'Frank Ruhl Libre','David',serif;font-size:1.28rem;line-height:1.95;color:var(--verse);background:var(--surface-2);border-right:4px solid var(--accent);padding:12px 16px;border-radius:10px}
+.verse cite{display:block;font-family:'Rubik',sans-serif;font-style:normal;font-size:.8rem;color:var(--muted);margin-top:2px;line-height:1.4}
+.hint{color:var(--muted);font-size:.92rem;margin:0 0 12px}
+.qbody{margin-top:6px}
+
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{display:flex;align-items:center;gap:10px;width:100%;text-align:right;padding:13px 16px;border:2px solid var(--line);background:var(--surface);border-radius:12px;line-height:1.45;transition:border-color .12s,background .12s}
+.opt:hover:not(:disabled){border-color:var(--primary)}
+.opt.sel{border-color:var(--primary);background:var(--primary-soft)}
+.opt:disabled{cursor:default}
+.opt.ok{border-color:var(--ok);background:var(--ok-soft)}
+.opt.bad{border-color:var(--bad);background:var(--bad-soft)}
+.opt.miss{border-color:var(--ok);border-style:dashed}
+.opt.dim{opacity:.55}
+.opt .box{flex:none;width:22px;height:22px;border-radius:6px;border:2px solid var(--muted);display:grid;place-items:center;font-size:.8rem;font-weight:700}
+.opt.sel .box{background:var(--primary);border-color:var(--primary);color:var(--primary-ink)}
+.opt.sel .box::after{content:"✓"}
+.tag{margin-inline-start:auto;flex:none;font-size:.75rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--surface);border:1px solid currentColor}
+.statement{font-size:1.15rem;font-weight:500;padding:14px 16px;border-radius:12px;background:var(--surface-2);margin-bottom:14px;line-height:1.6}
+.tfrow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tfrow .opt{justify-content:center;font-weight:600;font-size:1.08rem;padding:16px}
+.tfi{font-size:1.2rem}
+
+.match{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:10px 12px}
+.mcol{display:flex;flex-direction:column;gap:8px}
+.mhead{font-size:.8rem;font-weight:600;color:var(--muted)}
+.mitem{display:flex;flex-wrap:wrap;align-items:center;gap:8px;text-align:right;padding:10px 12px;min-height:52px;border:2px solid var(--line);background:var(--surface);border-radius:12px;line-height:1.35}
+.mitem:hover:not(:disabled){border-color:var(--primary)}
+.mitem.active{border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-soft)}
+.mitem:disabled{cursor:default}
+.mtxt{flex:1;min-width:0}
+.badge{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:.82rem;font-weight:700;border:2px dashed var(--line);color:var(--muted);background:transparent}
+.term .badge{border-style:solid}
+.paired .badge{color:#fff;border-style:solid}
+.mitem.ok{border-color:var(--ok);background:var(--ok-soft)}
+.mitem.bad{border-color:var(--bad);background:var(--bad-soft)}
+.fixline{flex-basis:100%;font-size:.86rem;font-weight:600;color:var(--ok)}
+
+.olist{display:flex;flex-direction:column;gap:8px}
+.oitem{display:flex;flex-wrap:wrap;align-items:center;gap:10px;text-align:right;padding:11px 14px;border:2px solid var(--line);background:var(--surface);border-radius:12px}
+.oitem:hover:not(:disabled){border-color:var(--primary)}
+.oitem.picked{border-color:var(--primary);background:var(--primary-soft)}
+.oitem.picked .badge{background:var(--primary);border-color:var(--primary);border-style:solid;color:var(--primary-ink)}
+.oitem.ok{border-color:var(--ok);background:var(--ok-soft)}
+.oitem.ok .badge{background:var(--ok);border-color:var(--ok)}
+.oitem.bad{border-color:var(--bad);background:var(--bad-soft)}
+.oitem.bad .badge{background:var(--bad);border-color:var(--bad)}
+.oitem.ok .badge,.oitem.bad .badge{color:#fff;border-style:solid}
+.oitem:disabled{cursor:default}
+.otxt{flex:1;min-width:0}
+.subactions{margin-top:10px}
+
+.fill{line-height:2.6}
+select.blank{font-family:inherit;font-size:.92em;padding:2px 6px;margin:0 3px;border-radius:8px;border:2px solid var(--primary);background:var(--surface);color:var(--ink);max-width:100%}
+select.blank:disabled{opacity:1}
+select.blank.ok{border-color:var(--ok);background:var(--ok-soft)}
+select.blank.bad{border-color:var(--bad);background:var(--bad-soft)}
+.fix{color:var(--ok);font-weight:700;font-family:'Rubik',sans-serif;font-size:.85em}
+.fix.miss{color:var(--warn)}
+
+.slist,.wlist{display:flex;flex-direction:column;gap:8px}
+.srow,.wq{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px;padding:10px 12px;border:2px solid var(--line);background:var(--surface);border-radius:12px}
+.srow.ok,.wq.ok{border-color:var(--ok);background:var(--ok-soft)}
+.srow.bad,.wq.bad{border-color:var(--bad);background:var(--bad-soft)}
+.stxt,.wtxt{flex:1 1 220px;min-width:0}
+.wtxt{font-family:'Frank Ruhl Libre',serif;font-size:1.15rem;color:var(--verse)}
+.seg{display:inline-flex;border:2px solid var(--primary);border-radius:10px;overflow:hidden;flex:none}
+.seg button{padding:7px 14px;border:0;background:transparent;font-weight:500;font-size:.92rem}
+.seg button+button{border-inline-start:2px solid var(--primary)}
+.seg button.on{background:var(--primary);color:var(--primary-ink)}
+.seg button:disabled{cursor:default}
+
+.errtext{font-size:1.12rem;line-height:2.3;padding:12px 16px;background:var(--surface-2);border-radius:12px}
+.tok{background:none;border:0;padding:1px 3px;margin:0 -1px;border-radius:6px;line-height:1.6;border-bottom:2px dotted var(--line)}
+.tok:hover:not(:disabled){background:var(--primary-soft)}
+.tok:disabled{cursor:default;border-bottom-color:transparent}
+.tok.marked{background:var(--bad-soft);color:var(--bad);text-decoration:line-through;border-bottom-color:transparent}
+.tok.found{background:var(--ok-soft);color:var(--ok);text-decoration:line-through}
+.tok.missed{background:var(--warn-soft);color:var(--warn);text-decoration:line-through;outline:2px dashed var(--warn)}
+.tok.wrongmark{background:var(--bad-soft);color:var(--bad);text-decoration:none;outline:2px solid var(--bad)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.82rem;color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-1px;margin-inline-end:4px}
+
+.ta{width:100%;min-height:120px;resize:vertical;padding:12px 14px;border:2px solid var(--line);border-radius:12px;background:var(--surface);line-height:1.6}
+.ta:focus{outline:none;border-color:var(--primary)}
+.pts{margin-top:14px;padding:14px 16px;border-radius:12px;background:var(--primary-soft);border:2px solid var(--primary)}
+.pts-h{font-weight:700;margin-bottom:8px}
+.pt{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-top:1px solid color-mix(in srgb,var(--primary) 25%,transparent);cursor:pointer}
+.pt:first-of-type{border-top:0}
+.pt input{flex:none;width:20px;height:20px;margin-top:3px;accent-color:var(--ok)}
+
+.fb{margin-top:16px;border-radius:12px;padding:12px 16px;border:2px solid;animation:in .25s ease}
+.fb.ok{border-color:var(--ok);background:var(--ok-soft)}
+.fb.part{border-color:var(--warn);background:var(--warn-soft)}
+.fb.bad{border-color:var(--bad);background:var(--bad-soft)}
+.fbh{font-weight:700;font-size:1.08rem}
+.fb.ok .fbh{color:var(--ok)} .fb.part .fbh{color:var(--warn)} .fb.bad .fbh{color:var(--bad)}
+.ex{margin:6px 0 0}
+.ref{margin-top:6px;font-size:.84rem;color:var(--muted)}
+.corder ol{margin:4px 0 0;padding-inline-start:22px}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:18px}
+.btn{font-weight:600;padding:12px 26px;border-radius:12px;border:0;background:var(--primary);color:var(--primary-ink);box-shadow:0 2px 0 rgba(0,0,0,.12)}
+.btn:hover{filter:brightness(1.07)}
+.btn.ghost{background:transparent;color:var(--primary);border:2px solid var(--primary);box-shadow:none}
+.btn.small{padding:6px 14px;font-size:.88rem}
+.btn:disabled{opacity:.5;cursor:default}
+.nudge{color:var(--bad);font-size:.92rem;font-weight:500}
+.shake{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-5px)}50%{transform:translateX(5px)}75%{transform:translateX(-3px)}}
+
+/* ---------- end ---------- */
+.endhead{display:flex;flex-wrap:wrap;align-items:center;gap:20px}
+.ring{flex:none;position:relative;width:132px;height:132px}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring .num{position:absolute;inset:0;display:grid;place-items:center;font-size:2rem;font-weight:700}
+.endmsg h2{margin:0 0 4px;font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:1.7rem;line-height:1.2}
+.endmsg p{margin:0;color:var(--muted)}
+.bk{margin-top:20px}
+.bk h3,.mist h3{font-size:1rem;margin:0 0 8px}
+.bkrow{display:grid;grid-template-columns:minmax(0,1fr) 120px 44px;align-items:center;gap:10px;padding:5px 0;font-size:.92rem}
+.bkbar{height:8px;background:var(--line);border-radius:99px;overflow:hidden}
+.bkbar span{display:block;height:100%;border-radius:99px}
+.bkrow b{text-align:left;font-variant-numeric:tabular-nums}
+.mist{margin-top:22px}
+.mitem2{border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:8px;background:var(--surface-2)}
+.mitem2 .mq{font-weight:600}
+.mitem2 .mx{font-size:.92rem;color:var(--muted);margin-top:4px}
+.confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+
+@media (max-width:560px){
+  body{font-size:16px}
+  .card{padding:18px 14px;border-radius:16px}
+  .hero{padding:24px 18px 20px}
+  .modes{grid-template-columns:1fr}
+  .match{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:8px}
+  .mitem{padding:8px 9px;gap:6px;font-size:.93rem}
+  .badge{width:24px;height:24px}
+  .verse{font-size:1.18rem}
+  .bkrow{grid-template-columns:minmax(0,1fr) 70px 40px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap" id="app"></main>
+
+<script>
+(function(){
+'use strict';
+
+/* =====================================================================
+   תוכן השאלות
+   t: סוג השאלה | q: השאלה | v: פסוק לתצוגה | vr: מקור הפסוק
+   ex: הסבר אחרי הבדיקה | ref: מקור
+   ב-mc האפשרות הראשונה היא הנכונה (הסדר מעורבב בתצוגה)
+   ב-fill: מערך = מקום ריק, האפשרות הראשונה נכונה
+   ב-error: {שגוי|נכון}
+   ===================================================================== */
+var SECTIONS = [
+{
+  id:'a', letter:'א', title:'רקע ומשפחת אלקנה', range:'פרק א׳, פסוקים א׳–ח׳',
+  qs:[
+    {t:'mc', q:'באיזו תקופה מתרחש הסיפור?',
+     o:['בסוף תקופת השופטים – המאה ה־11 לפני הספירה','בימי דוד המלך','בזמן יציאת מצרים','בימי בית המקדש השני'],
+     ex:'הסיפור מתחיל בסיומה של תקופת השופטים, במאה ה־11 לפני הספירה – תקופה שבה עוד לא היה מלך בישראל.'},
+    {t:'mc', q:'מה מתאר הפסוק הזה על התקופה?',
+     v:'בַּיָּמִים הָהֵם אֵין מֶלֶךְ בְּיִשְׂרָאֵל, אִישׁ הַיָּשָׁר בְּעֵינָיו יַעֲשֶׂה', vr:'שופטים כ״א, כ״ה',
+     o:['לא הייתה הנהגה מרכזית, וכל אחד עשה מה שנראה לו','כל העם היה ישר וצדיק','המלך שלט ביד קשה בעם','העם בחר מלך חדש בכל שנה'],
+     ex:'בלי מלך ובלי הנהגה חזקה, כל אחד עשה "הישר בעיניו" – מה שהוא חשב לנכון. זה הרקע לשחיתות שנראה בהמשך אצל בני עלי.'},
+    {t:'mc', q:'מאיפה היה אלקנה?',
+     o:['מהר אפרים','מירושלים','מבית לחם שבהר יהודה','מהגליל'],
+     ex:'"וַיְהִי אִישׁ אֶחָד מִן הָרָמָתַיִם צוֹפִים מֵהַר אֶפְרָיִם, וּשְׁמוֹ אֶלְקָנָה" (בהמשך העיר נקראת "הרמה").', ref:'פרק א׳, פסוק א׳'},
+    {t:'mc', q:'הפסוק מונה הרבה דורות של אבות אלקנה: "בֶּן יְרֹחָם בֶּן אֱלִיהוּא בֶּן תֹּחוּ בֶן צוּף". מה זה מלמד?',
+     o:['שאלקנה היה ממשפחה מוכרת ומכובדת','שכל האבות שלו היו כהנים בשילה','שאלקנה היה זקן מאוד','שאלקנה היה מלך'],
+     ex:'כשהמקרא מזכיר דורות רבים בהצגת שם, זה מצביע על כך שהאדם הוא ממשפחה מוכרת ומכובדת – "יחוס מרשים".', ref:'פרק א׳, פסוק א׳'},
+    {t:'tf', s:'לפנינה היו ילדים, ולחנה לא היו ילדים.', a:true,
+     ex:'"וַיְהִי לִפְנִנָּה יְלָדִים וּלְחַנָּה אֵין יְלָדִים". בעובדה הזו מגולם המתח המשפחתי והכאב הגדול שממנו נולד כל הסיפור.', ref:'פרק א׳, פסוק ב׳'},
+    {t:'mc', q:'מה פירוש "מִיָּמִים יָמִימָה"?',
+     v:'וְעָלָה הָאִישׁ הַהוּא מֵעִירוֹ מִיָּמִים יָמִימָה, לְהִשְׁתַּחֲוֹת וְלִזְבֹּחַ לַה׳ צְבָאוֹת בְּשִׁלֹה', vr:'פרק א׳, פסוק ג׳',
+     o:['מדי שנה בשנה','בכל יום','פעם בשבע שנים','בכל שבת'],
+     ex:'"מימים ימימה" = מדי שנה בשנה. זו הייתה שגרת החיים של משפחת אלקנה – עלייה קבועה לשילה בכל שנה.'},
+    {t:'mc', q:'לאן עלה אלקנה עם משפחתו כדי להשתחוות ולזבוח לה׳?',
+     o:['למשכן בשילה','לבית המקדש בירושלים','להר סיני','לבית אל'],
+     ex:'"לְהִשְׁתַּחֲוֹת וְלִזְבֹּחַ לַה׳ צְבָאוֹת בְּשִׁלֹה". בתקופה הזו עוד לא היה בית מקדש בירושלים – המשכן היה בשילה.', ref:'פרק א׳, פסוק ג׳'},
+    {t:'mc', q:'מה הוצב במשכן בשילה?',
+     o:['ארון ה׳','כיסא המלוכה','קבר יוסף','בית המשפט של השופטים'],
+     ex:'במשכן בשילה, ששימש כמקום פולחן, הוצב ארון ה׳. בני ישראל שחיו באזור נהגו לעלות אליו ולזבוח בו זבחים לה׳.'},
+    {t:'mc', q:'מי היה עלי?',
+     o:['הכהן במשכן בשילה, שגם שפט והנהיג את ישראל 40 שנה','אחיו של אלקנה','מלך ישראל באותה תקופה','נביא שהגיע מהר אפרים'],
+     ex:'עלי הכהן נחשב לכהן הגדול האחרון במשכן שילה. הוא שימש כשופט ומנהיג של עם ישראל במשך ארבעים שנה.'},
+    {t:'mc', q:'מה עשה אלקנה כשנתן לחנה "מָנָה אַחַת אַפָּיִם"?',
+     o:['נתן לה מנה כפולה, כי אהב אותה','לא נתן לה כלום, כי כעס עליה','נתן לה מנה קטנה במיוחד','נתן לה את המנה של פנינה'],
+     ex:'"וּלְחַנָּה יִתֵּן מָנָה אַחַת אַפָּיִם, כִּי אֶת חַנָּה אָהֵב" – מנה אחת אפיים = מנה כפולה.', ref:'פרק א׳, פסוק ה׳'},
+    {t:'tf', s:'פנינה ניסתה לנחם את חנה ולעודד אותה.', a:false,
+     ex:'להפך! "וְכִעֲסַתָּה צָרָתָהּ גַּם כַּעַס בַּעֲבוּר הַרְּעִמָהּ" – פנינה (הצרה) הכעיסה את חנה שוב ושוב, שנה אחרי שנה, וחנה בכתה ולא אכלה.', ref:'פרק א׳, פסוקים ו׳–ז׳'},
+    {t:'mc', q:'מי אמר לחנה: "הֲלוֹא אָנֹכִי טוֹב לָךְ מֵעֲשָׂרָה בָּנִים"?',
+     o:['אלקנה, בעלה','עלי הכהן','פנינה','איש האלוהים'],
+     ex:'אלקנה ניסה לנחם את חנה: "חַנָּה, לָמֶה תִבְכִּי וְלָמֶה לֹא תֹאכְלִי... הֲלוֹא אָנֹכִי טוֹב לָךְ מֵעֲשָׂרָה בָּנִים".', ref:'פרק א׳, פסוק ח׳'},
+    {t:'fill', q:'השלם את הפסוקים:',
+     parts:['וְלוֹ שְׁתֵּי נָשִׁים, שֵׁם אַחַת חַנָּה וְשֵׁם הַשֵּׁנִית ',['פְּנִנָּה','רוּת','מִיכַל'],'; וַיְהִי לִפְנִנָּה ',['יְלָדִים','צָרוֹת','בָּנוֹת'],', וּלְחַנָּה ',['אֵין יְלָדִים','שְׁנֵי בָנִים','בַּת אַחַת'],'.','\n','וּלְחַנָּה יִתֵּן מָנָה אַחַת ',['אַפָּיִם','קְטַנָּה','בְּשָׁנָה'],', כִּי אֶת חַנָּה ',['אָהֵב','שָׂנֵא','בָּחַר'],', וַה׳ סָגַר רַחְמָהּ.'],
+     ex:'חנה ופנינה – לפנינה ילדים ולחנה אין. אלקנה אוהב את חנה ונותן לה מנה כפולה ("אפיים").', ref:'פרק א׳, פסוקים ב׳, ה׳'}
+  ]
+},
+{
+  id:'b', letter:'ב', title:'נדר חנה', range:'פרק א׳, פסוקים ט׳–י״ח',
+  qs:[
+    {t:'mc', q:'באיזה מצב רוח הייתה חנה כשהתפללה?',
+     v:'וְהִיא מָרַת נָפֶשׁ, וַתִּתְפַּלֵּל עַל ה׳ וּבָכֹה תִבְכֶּה', vr:'פרק א׳, פסוק י׳',
+     o:['עצובה ומרירה מאוד – היא בכתה','שמחה ומאושרת','כועסת על עלי הכהן','רגועה ואדישה'],
+     ex:'"מרת נפש" = עצובה ומרירה מאוד. חנה התפללה ובכתה – "וּבָכֹה תִבְכֶּה".'},
+    {t:'mc', q:'מהם שני החלקים של הנדר של חנה?',
+     o:['בקשה והבטחה','תודה ושבח','וידוי ובקשת סליחה','שאלה ותשובה'],
+     ex:'בנדר יש שני חלקים: בקשה – מה חנה מבקשת מה׳ (בן), והבטחה – מה היא מתחייבת לעשות אם ה׳ ייענה (לתת את הבן לה׳).'},
+    {t:'sort', q:'מיין את חלקי הנדר של חנה: מה היא מבקשת ומה היא מבטיחה?', cats:['בקשה','הבטחה'],
+     items:[['אִם רָאֹה תִרְאֶה בָּעֳנִי אֲמָתֶךָ',0],['וּזְכַרְתַּנִי וְלֹא תִשְׁכַּח אֶת אֲמָתֶךָ',0],['וְנָתַתָּה לַאֲמָתְךָ זֶרַע אֲנָשִׁים',0],['וּנְתַתִּיו לַה׳ כָּל יְמֵי חַיָּיו',1],['וּמוֹרָה לֹא יַעֲלֶה עַל רֹאשׁוֹ',1]],
+     ex:'הבקשה: שה׳ יראה בצערה, יזכור אותה וייתן לה בן ("זֶרַע אֲנָשִׁים"). ההבטחה: הבן יוקדש לה׳ כל ימי חייו, ותער לא יעבור על ראשו.', ref:'פרק א׳, פסוק י״א'},
+    {t:'mc', q:'מה הבטיחה חנה במילים "וּמוֹרָה לֹא יַעֲלֶה עַל רֹאשׁוֹ"?',
+     o:['שלא יעבור תער על ראשו – לא יספרו את שערו, כמו נזיר','שלא ילמד אצל מורה','שלא יחבוש כובע על ראשו','שלא יעלה אף פעם להר'],
+     ex:'"מורה" כאן פירושו תער. חנה הבטיחה שבנה יהיה מוקדש לה׳, ושערו לא יסופר – סימן להקדשה לה׳ (כמו נזיר).', ref:'פרק א׳, פסוק י״א'},
+    {t:'mc', q:'למה עלי חשב שחנה שיכורה?',
+     o:['כי היא דיברה בלב – רק שפתיה זזו וקולה לא נשמע','כי היא צעקה בקול רם','כי היא שתתה הרבה יין בסעודה','כי היא נרדמה ליד ההיכל'],
+     ex:'"וְחַנָּה הִיא מְדַבֶּרֶת עַל לִבָּהּ, רַק שְׂפָתֶיהָ נָּעוֹת וְקוֹלָהּ לֹא יִשָּׁמֵעַ, וַיַּחְשְׁבֶהָ עֵלִי לְשִׁכֹּרָה". עלי לא היה רגיל לתפילה שקטה מהלב.', ref:'פרק א׳, פסוק י״ג'},
+    {t:'who', q:'מי אמר כל אחד מהמשפטים?', speakers:['חנה','עלי','אלקנה','פנינה'],
+     quotes:[['עַד מָתַי תִּשְׁתַּכָּרִין? הָסִירִי אֶת יֵינֵךְ מֵעָלָיִךְ','עלי'],['לֹא אֲדֹנִי, אִשָּׁה קְשַׁת רוּחַ אָנֹכִי, וְיַיִן וְשֵׁכָר לֹא שָׁתִיתִי','חנה'],['לְכִי לְשָׁלוֹם, וֵאלֹהֵי יִשְׂרָאֵל יִתֵּן אֶת שֵׁלָתֵךְ','עלי'],['תִּמְצָא שִׁפְחָתְךָ חֵן בְּעֵינֶיךָ','חנה']],
+     ex:'עלי האשים את חנה שהיא שיכורה; חנה הסבירה שהיא "קשת רוח" ששופכת את נפשה לפני ה׳; אז עלי בירך אותה, וחנה הודתה לו.', ref:'פרק א׳, פסוקים י״ד–י״ח'},
+    {t:'mc', q:'מה גרם לעלי לשנות את דעתו על חנה ולברך אותה?',
+     o:['חנה הסבירה לו שהיא לא שיכורה, אלא שופכת את נפשה לפני ה׳','אלקנה הגיע והסביר לו','הוא ראה שאין לה כוס יין ביד','הוא שמע קול מן השמיים'],
+     ex:'"וָאֶשְׁפֹּךְ אֶת נַפְשִׁי לִפְנֵי ה׳... כִּי מֵרֹב שִׂיחִי וְכַעְסִי דִּבַּרְתִּי עַד הֵנָּה". אחרי ההסבר עלי הבין את טעותו ובירך אותה.', ref:'פרק א׳, פסוקים ט״ו–י״ז'},
+    {t:'tf', s:'אחרי שעלי בירך אותה, חנה המשיכה לבכות ולא אכלה.', a:false,
+     ex:'"וַתֵּלֶךְ הָאִשָּׁה לְדַרְכָּהּ וַתֹּאכַל, וּפָנֶיהָ לֹא הָיוּ לָהּ עוֹד" – חנה אכלה, והעצב נעלם מפניה. היא האמינה שתפילתה תיענה.', ref:'פרק א׳, פסוק י״ח'},
+    {t:'fill', q:'השלם את הפסוקים:',
+     parts:['וְהִיא ',['מָרַת','שְׂמֵחַת','טוֹבַת'],' נָפֶשׁ, וַתִּתְפַּלֵּל עַל ה׳ וּבָכֹה תִבְכֶּה.','\n','וְחַנָּה הִיא מְדַבֶּרֶת עַל ',['לִבָּהּ','רֹאשָׁהּ','פִּיהָ'],', רַק ',['שְׂפָתֶיהָ','עֵינֶיהָ','יָדֶיהָ'],' נָּעוֹת וְקוֹלָהּ לֹא יִשָּׁמֵעַ.'],
+     ex:'חנה הייתה "מרת נפש", והתפללה בלב – רק השפתיים זזו.', ref:'פרק א׳, פסוקים י׳, י״ג'},
+    {t:'error', q:'קרא את הסיכום ומצא את הטעויות:',
+     text:'אלקנה היה איש מהר {יהודה|אפרים}. היו לו שתי נשים: חנה ופנינה. בכל {חודש|שנה} עלה אלקנה עם משפחתו למשכן {בירושלים|בשילה}. לחנה הוא נתן מנה {קטנה|כפולה}, כי אהב אותה. פנינה {ניחמה|הכעיסה} את חנה, וחנה בכתה ולא אכלה. בהיכל ה׳ התפללה חנה בלב, ועלי הכהן חשב שהיא {חולה|שיכורה}.',
+     ex:'אלקנה מהר אפרים; עלה מדי שנה ("מימים ימימה") לשילה; נתן לחנה מנה כפולה; פנינה הכעיסה אותה; עלי חשב שהיא שיכורה.', ref:'פרק א׳, פסוקים א׳–י״ג'}
+  ]
+},
+{
+  id:'c', letter:'ג', title:'לידת שמואל ומסירתו למשכן בשילה', range:'פרק א׳, י״ט–כ״ח; פרק ב׳, י״א, י״ח–כ״א',
+  qs:[
+    {t:'order', q:'סדר את האירועים של פרק א׳ לפי הסדר שבו קרו:',
+     items:['אלקנה ומשפחתו עולים לשילה מדי שנה','פנינה מכעיסה את חנה, וחנה בוכה ולא אוכלת','חנה מתפללת בהיכל ה׳ ונודרת נדר','עלי חושב שחנה שיכורה','עלי מברך את חנה: "לכי לשלום"','שמואל נולד','חנה נשארת בבית עד שהנער נגמל','חנה מביאה את שמואל לעלי בשילה'],
+     ex:'העלייה השנתית ← הצער של חנה ← התפילה והנדר ← עלי חושב שהיא שיכורה ← הברכה ← הלידה ← ההמתנה עד שהנער נגמל ← שמואל מובא לעלי.'},
+    {t:'mc', q:'למה קראה חנה לבנה "שמואל"?',
+     o:['"כִּי מֵה׳ שְׁאִלְתִּיו" – כי ביקשה אותו מה׳','על שם הסבא של אלקנה','כי עלי בחר לו את השם','כי הוא נולד בשילה'],
+     ex:'"וַתִּקְרָא אֶת שְׁמוֹ שְׁמוּאֵל, כִּי מֵה׳ שְׁאִלְתִּיו" – השם קשור לבקשה (שאלה) של חנה מה׳.', ref:'פרק א׳, פסוק כ׳'},
+    {t:'mc', q:'איזה שורש חוזר שוב ושוב בסוף פרק א׳ – "שְׁאִלְתִּיו", "שְׁאֵלָתִי", "הִשְׁאִלְתִּהוּ", "שָׁאוּל"?',
+     o:['ש־א־ל','ש־מ־ע','נ־ת־ן','ב־ק־ש'],
+     ex:'השורש ש־א־ל קושר בין השם "שמואל" לסיפור: חנה שאלה (ביקשה) את הבן מה׳ – ועכשיו היא "משאילה" אותו בחזרה לה׳ לכל חייו.', ref:'פרק א׳, פסוקים כ׳, כ״ז–כ״ח'},
+    {t:'mc', q:'למה חנה לא עלתה לשילה בשנה שאחרי הלידה?',
+     o:['רצתה לחכות עד שהנער ייגמל (יפסיק לינוק)','היא הייתה חולה','אלקנה אסר עליה לעלות','היא פחדה מעלי הכהן'],
+     ex:'"עַד יִגָּמֵל הַנַּעַר וַהֲבִאֹתִיו, וְנִרְאָה אֶת פְּנֵי ה׳ וְיָשַׁב שָׁם עַד עוֹלָם".', ref:'פרק א׳, פסוק כ״ב'},
+    {t:'tf', s:'אלקנה הסכים שחנה תישאר בבית עד שהנער ייגמל.', a:true,
+     ex:'"עֲשִׂי הַטּוֹב בְּעֵינַיִךְ, שְׁבִי עַד גָּמְלֵךְ אֹתוֹ, אַךְ יָקֵם ה׳ אֶת דְּבָרוֹ".', ref:'פרק א׳, פסוק כ״ג'},
+    {t:'who', q:'מי אמר כל אחד מהמשפטים?', speakers:['חנה','אלקנה','עלי','פנינה'],
+     quotes:[['עַד יִגָּמֵל הַנַּעַר וַהֲבִאֹתִיו','חנה'],['עֲשִׂי הַטּוֹב בְּעֵינַיִךְ, שְׁבִי עַד גָּמְלֵךְ אֹתוֹ','אלקנה'],['אֲנִי הָאִשָּׁה הַנִּצֶּבֶת עִמְּכָה בָּזֶה לְהִתְפַּלֵּל אֶל ה׳','חנה'],['יָשֵׂם ה׳ לְךָ זֶרַע מִן הָאִשָּׁה הַזֹּאת','עלי']],
+     ex:'חנה ביקשה לחכות עד שהנער ייגמל, ואלקנה הסכים. בשילה חנה הזכירה לעלי שהיא האישה שהתפללה שם. בהמשך עלי בירך את אלקנה שייוולדו לו עוד ילדים מחנה.', ref:'פרק א׳, פסוקים כ״ב–כ״ו; פרק ב׳, פסוק כ׳'},
+    {t:'mc', q:'מה הביאה חנה למשכן יחד עם שמואל?',
+     o:['שלושה פרים, איפה של קמח ונבל (כד) של יין','שני כבשים ועוגה','זהב וכסף','רק את שמואל, בלי שום מנחה'],
+     ex:'"וַתַּעֲלֵהוּ עִמָּהּ... בְּפָרִים שְׁלֹשָׁה וְאֵיפָה אַחַת קֶמַח וְנֵבֶל יַיִן, וַתְּבִאֵהוּ בֵית ה׳ שִׁלוֹ".', ref:'פרק א׳, פסוק כ״ד'},
+    {t:'fill', q:'השלם את הפסוקים:',
+     parts:['וַתִּקְרָא אֶת שְׁמוֹ ',['שְׁמוּאֵל','שָׁאוּל','אֶלְקָנָה'],', כִּי מֵה׳ ',['שְׁאִלְתִּיו','קִבַּלְתִּיו','רְאִיתִיו'],'.','\n','וְגַם אָנֹכִי ',['הִשְׁאִלְתִּהוּ','מְכַרְתִּיהוּ','שְׁלַחְתִּיהוּ'],' לַה׳ כָּל הַיָּמִים אֲשֶׁר הָיָה, הוּא שָׁאוּל לַה׳.'],
+     ex:'שימו לב לשורש ש־א־ל שחוזר: שְׁאִלְתִּיו, הִשְׁאִלְתִּהוּ, שָׁאוּל.', ref:'פרק א׳, פסוקים כ׳, כ״ח'},
+    {t:'mc', q:'מה עשה שמואל אחרי שאלקנה חזר לביתו ברמה?',
+     o:['שירת את ה׳ לפני עלי הכהן','רעה את הצאן של אביו','חזר הביתה עם אביו','יצא ללמוד אצל הנביאים'],
+     ex:'"וַיֵּלֶךְ אֶלְקָנָה הָרָמָתָה עַל בֵּיתוֹ, וְהַנַּעַר הָיָה מְשָׁרֵת אֶת ה׳ אֶת פְּנֵי עֵלִי הַכֹּהֵן". שמואל נשאר במשכן – חנה קיימה את נדרה.', ref:'פרק ב׳, פסוק י״א'},
+    {t:'mc', q:'מה הכינה חנה לשמואל והביאה לו בכל שנה?',
+     o:['מעיל קטן','אפוד של זהב','זוג סנדלים','ספר תורה'],
+     ex:'"וּמְעִיל קָטֹן תַּעֲשֶׂה לּוֹ אִמּוֹ, וְהַעַלְתָה לוֹ מִיָּמִים יָמִימָה" – גם אחרי שמסרה אותו, חנה המשיכה לדאוג לבנה.', ref:'פרק ב׳, פסוק י״ט'},
+    {t:'tf', s:'אחרי שמואל לא נולדו לחנה ילדים נוספים.', a:false,
+     ex:'עלי בירך את אלקנה וחנה, "כִּי פָקַד ה׳ אֶת חַנָּה, וַתַּהַר וַתֵּלֶד שְׁלֹשָׁה בָנִים וּשְׁתֵּי בָנוֹת".', ref:'פרק ב׳, פסוקים כ׳–כ״א'}
+  ]
+},
+{
+  id:'d', letter:'ד', title:'חטאי בני עלי', range:'פרק ב׳, פסוקים י״ב–י״ז, כ״ב–כ״ה',
+  qs:[
+    {t:'mc', q:'מה היה תפקיד הכהנים במשכן?',
+     o:['לנהל את המקדש, להנחות את המתפללים ולהוביל את עבודת הקורבנות','לצאת בראש הצבא למלחמה','לגבות מסים בשביל המלך','לשמור על גבולות הארץ'],
+     ex:'הכהנים ניהלו את המקדש והעבירו את המנחות והתפילות של העם לה׳. לפי החוק, מותר להם לאכול רק חלקים מסוימים מהקורבנות.'},
+    {t:'mc', q:'לפי המסורת, איך עוברת הכהונה?',
+     o:['מאב לבן – מדור לדור','בהגרלה בין כל השבטים','העם בוחר את הכהנים','המלך ממנה את הכהנים'],
+     ex:'הכהונה עוברת מאב לבן, וזה כבוד גדול לשרת את ה׳. לכן בני עלי, חפני ופנחס, היו כהנים – ולכן החטאים שלהם חמורים כל כך.'},
+    {t:'mc', q:'מה פירוש "בְּנֵי בְלִיָּעַל"?',
+     v:'וּבְנֵי עֵלִי בְּנֵי בְלִיָּעַל, לֹא יָדְעוּ אֶת ה׳', vr:'פרק ב׳, פסוק י״ב',
+     o:['אנשים רעים ומושחתים','אנשים עניים','ילדים קטנים','גיבורי מלחמה'],
+     ex:'"בני בליעל" = אנשים רעים ומושחתים. "לא ידעו את ה׳" – הם לא כיבדו את ה׳, אף שהיו כהנים.'},
+    {t:'mc', q:'מה עשה "נַעַר הַכֹּהֵן" עם "הַמַּזְלֵג שְׁלֹשׁ הַשִּׁנַּיִם"?',
+     o:['תקע אותו בסיר שבו התבשל הבשר, וכל מה שעלה במזלג לקח לכהן','חילק בעזרתו בשר לעניים','הדליק בעזרתו את האש על המזבח','ניקה בעזרתו את כלי המשכן'],
+     ex:'"וְהִכָּה בַכִּיּוֹר אוֹ בַדּוּד אוֹ בַקַּלַּחַת אוֹ בַפָּרוּר, כֹּל אֲשֶׁר יַעֲלֶה הַמַּזְלֵג יִקַּח הַכֹּהֵן בּוֹ" – בני עלי לקחו לעצמם יותר ממה שמגיע להם, "כָּכָה יַעֲשׂוּ לְכָל יִשְׂרָאֵל".', ref:'פרק ב׳, פסוקים י״ג–י״ד'},
+    {t:'multi', q:'אילו מעשים עשו בני עלי (והמשרתים שלהם)?',
+     o:[['לקחו לעצמם כל מה שעלה במזלג – יותר ממה שמגיע להם',true],['דרשו בשר חי, עוד לפני שהקטירו את החלב',true],['איימו לקחת את הבשר בכוח',true],['התנהגו באופן לא מוסרי עם הנשים ששירתו בפתח אוהל מועד',true],['גנבו את ארון ה׳ מהמשכן',false],['גירשו את שמואל מהמשכן',false],['סירבו להקריב קורבנות בכלל',false]],
+     ex:'בני עלי ניצלו את מעמדם: לקחו בשר שלא הגיע להם, לא חיכו להקטרת החלב ("כִּי אִם חָי"), איימו "לָקַחְתִּי בְחָזְקָה", והתנהגו באופן לא מוסרי עם הנשים בפתח אוהל מועד. זו שחיתות שלטונית.', ref:'פרק ב׳, פסוקים י״ג–י״ז, כ״ב'},
+    {t:'who', q:'מי אמר כל אחד מהמשפטים?', speakers:['נער הכהן','האיש הזובח','עלי','שמואל'],
+     quotes:[['תְּנָה בָשָׂר לִצְלוֹת לַכֹּהֵן, וְלֹא יִקַּח מִמְּךָ בָּשָׂר מְבֻשָּׁל כִּי אִם חָי','נער הכהן'],['קַטֵּר יַקְטִירוּן כַּיּוֹם הַחֵלֶב, וְקַח לְךָ כַּאֲשֶׁר תְּאַוֶּה נַפְשֶׁךָ','האיש הזובח'],['לֹא, כִּי עַתָּה תִתֵּן, וְאִם לֹא – לָקַחְתִּי בְחָזְקָה','נער הכהן'],['אַל בָּנָי, כִּי לוֹא טוֹבָה הַשְּׁמֻעָה אֲשֶׁר אָנֹכִי שֹׁמֵעַ','עלי']],
+     ex:'נער הכהן (המשרת של בני עלי) דרש בשר חי. האיש שבא לזבוח ביקש שקודם יקטירו את החלב – ואז נער הכהן איים לקחת בכוח. עלי הוכיח את בניו: "אַל בָּנָי".', ref:'פרק ב׳, פסוקים ט״ו–ט״ז, כ״ד'},
+    {t:'tf', s:'לפי הכתוב, החטא של בני עלי היה קטן ולא חמור.', a:false,
+     ex:'"וַתְּהִי חַטַּאת הַנְּעָרִים גְּדוֹלָה מְאֹד אֶת פְּנֵי ה׳, כִּי נִאֲצוּ הָאֲנָשִׁים אֵת מִנְחַת ה׳" – החטא היה גדול מאוד, כי בגללו מנחת ה׳ (הקורבנות) בוזתה.', ref:'פרק ב׳, פסוק י״ז'},
+    {t:'mc', q:'איך נודע לעלי על המעשים של בניו?',
+     o:['הוא היה זקן מאוד ושמע על כך מהעם','שמואל סיפר לו','הוא ראה את זה בחלום','חנה התלוננה לפניו'],
+     ex:'"וְעֵלִי זָקֵן מְאֹד, וְשָׁמַע אֵת כָּל אֲשֶׁר יַעֲשׂוּן בָּנָיו לְכָל יִשְׂרָאֵל... אֲשֶׁר אָנֹכִי שֹׁמֵעַ אֶת דִּבְרֵיכֶם רָעִים מֵאֵת כָּל הָעָם".', ref:'פרק ב׳, פסוקים כ״ב–כ״ג'},
+    {t:'mc', q:'מה טען עלי בתוכחה לבניו?',
+     v:'אִם יֶחֱטָא אִישׁ לְאִישׁ וּפִלְלוֹ אֱלֹהִים, וְאִם לַה׳ יֶחֱטָא אִישׁ – מִי יִתְפַּלֶּל לוֹ?', vr:'פרק ב׳, פסוק כ״ה',
+     o:['כשאדם חוטא לאדם אחר אפשר להכריע ולתקן, אבל מי שחוטא נגד ה׳ – אין מי שיתפלל ויגן עליו','שאסור להתפלל בכלל','שחטא נגד ה׳ פחות חמור מחטא נגד אדם','שהוא עצמו יתפלל בשבילם והכול יסתדר'],
+     ex:'עלי הסביר לבניו שהחטא שלהם חמור במיוחד – הם חוטאים ישירות נגד ה׳, ואין מי שיתווך בשבילם.'},
+    {t:'tf', s:'בני עלי שמעו לתוכחה של אביהם ותיקנו את דרכם.', a:false,
+     ex:'"וְלֹא יִשְׁמְעוּ לְקוֹל אֲבִיהֶם, כִּי חָפֵץ ה׳ לַהֲמִיתָם".', ref:'פרק ב׳, פסוק כ״ה'}
+  ]
+},
+{
+  id:'e', letter:'ה', title:'השוואה: שמואל מול בני עלי', range:'פרק ב׳, פסוקים י״א–כ״ו',
+  qs:[
+    {t:'sort', q:'למי מתאים כל תיאור – לשמואל או לבני עלי?', cats:['שמואל','בני עלי'],
+     items:[['מְשָׁרֵת אֶת ה׳ אֶת פְּנֵי עֵלִי הַכֹּהֵן',0],['בְּנֵי בְלִיָּעַל, לֹא יָדְעוּ אֶת ה׳',1],['נַעַר חָגוּר אֵפוֹד בָּד',0],['דורשים בשר חי לפני הקטרת החלב',1],['וַיִּגְדַּל הַנַּעַר עִם ה׳',0],['וְלֹא יִשְׁמְעוּ לְקוֹל אֲבִיהֶם',1],['הֹלֵךְ וְגָדֵל וָטוֹב, גַּם עִם ה׳ וְגַם עִם אֲנָשִׁים',0],['"וְאִם לֹא – לָקַחְתִּי בְחָזְקָה"',1]],
+     ex:'שמואל: משרת את ה׳, חגור אפוד בד, גדל עם ה׳, "הֹלֵךְ וְגָדֵל וָטוֹב". בני עלי: בני בליעל, דורשים בשר חי, לוקחים בחזקה, לא שומעים לאביהם.'},
+    {t:'order', q:'פרק ב׳ "קופץ" בין שמואל לבני עלי. סדר את הקטעים לפי הסדר בפרק:',
+     items:['אלקנה חוזר לרמה, ושמואל משרת את ה׳ לפני עלי','בני עלי לוקחים בשר במזלג ודורשים בשר חי','שמואל משרת חגור אפוד בד, וחנה מביאה לו מעיל קטן','עלי מוכיח את בניו, והם לא שומעים בקולו','שמואל הולך וגדל וטוב עם ה׳ ועם אנשים','איש האלוהים בא לעלי ומודיע על העונש'],
+     ex:'המבנה: שמואל (פס׳ י״א) ← בני עלי (י״ב–י״ז) ← שמואל (י״ח–כ״א) ← בני עלי (כ״ב–כ״ה) ← שמואל (כ״ו) ← העונש (כ״ז–ל״ו).'},
+    {t:'mc', q:'למה הכתוב עובר הלוך ושוב בין שמואל לבני עלי?',
+     o:['כדי להדגיש את הניגוד: שמואל טוב ונאמן לה׳ ובני עלי מושחתים – וכך לרמוז ששמואל יחליף אותם','כי המחבר שכח מה כתב קודם','כדי להראות ששמואל ובני עלי היו חברים','כדי לספר שבני עלי לימדו את שמואל'],
+     ex:'המבנה המתחלף יוצר השוואה חדה: באותו משכן ובאותה עבודה – שמואל הולך ומתעלה, ובני עלי הולכים ומידרדרים. הקורא מבין שהעתיד שייך לשמואל.'},
+    {t:'mc', q:'"וְהַנַּעַר שְׁמוּאֵל הֹלֵךְ וְגָדֵל וָטוֹב, גַּם עִם ה׳ וְגַם עִם אֲנָשִׁים". במה זה הפוך לבני עלי?',
+     o:['שמואל טוב גם כלפי ה׳ וגם כלפי העם, ובני עלי חטאו גם נגד ה׳ וגם נגד העם','שמואל היה גבוה יותר מבני עלי','שמואל היה עשיר ובני עלי עניים','אין שום הבדל ביניהם'],
+     ex:'בני עלי "לֹא יָדְעוּ אֶת ה׳" וביזו את מנחתו (חטא כלפי ה׳), ולקחו מהעם בכוח (חטא כלפי אנשים). שמואל – בדיוק ההפך.', ref:'פרק ב׳, פסוק כ״ו'},
+    {t:'tf', s:'גם שמואל וגם בני עלי שירתו באותו מקום – המשכן בשילה.', a:true,
+     ex:'זה מה שהופך את ההשוואה לחזקה כל כך: אותו מקום ואותה עבודת קודש – אבל התנהגות הפוכה לגמרי.'},
+    {t:'mc', q:'"וּשְׁמוּאֵל מְשָׁרֵת אֶת פְּנֵי ה׳, נַעַר חָגוּר אֵפוֹד בָּד". מה מלמד הלבוש של שמואל?',
+     o:['שכבר מגיל צעיר הוא משרת במשכן, בבגד של עבודת הקודש','שהוא היה עשיר מאוד','שהוא התכונן לצאת למלחמה','שהיה לו קר במשכן'],
+     ex:'אפוד בד הוא בגד של משרתי המקדש. שמואל, ילד קטן, כבר עובד בקודש – בניגוד לבני עלי, הכהנים המבוגרים שמבזים את הקודש.', ref:'פרק ב׳, פסוק י״ח'},
+    {t:'fill', q:'השלם את הפסוקים:',
+     parts:['וּשְׁמוּאֵל מְשָׁרֵת אֶת פְּנֵי ה׳, נַעַר חָגוּר ',['אֵפוֹד בָּד','חֶרֶב','שַׂק'],'.','\n','וְהַנַּעַר שְׁמוּאֵל הֹלֵךְ וְגָדֵל ',['וָטוֹב','וְחָזָק','וְחָכָם'],', גַּם עִם ',['ה׳','אָבִיו','עֵלִי'],' וְגַם עִם ',['אֲנָשִׁים','כֹּהֲנִים','אֶחָיו'],'.'],
+     ex:'שמואל משרת בקודש ("אפוד בד"), והוא טוב גם בעיני ה׳ וגם בעיני האנשים.', ref:'פרק ב׳, פסוקים י״ח, כ״ו'}
+  ]
+},
+{
+  id:'f', letter:'ו', title:'עונשו של בית עלי', range:'פרק ב׳, פסוקים כ״ז–ל״ו',
+  qs:[
+    {t:'mc', q:'בפרק ב׳, מי בא אל עלי כדי להודיע לו על העונש?',
+     o:['איש האלוהים – נביא','שמואל','אלקנה','מלאך בחלום'],
+     ex:'"וַיָּבֹא אִישׁ אֱלֹהִים אֶל עֵלִי וַיֹּאמֶר אֵלָיו: כֹּה אָמַר ה׳...". איש האלוהים מתגלה לעלי ומצהיר בפניו שלחינוך שלו יש השלכות.', ref:'פרק ב׳, פסוק כ״ז'},
+    {t:'mc', q:'על מה מאשים איש האלוהים את עלי עצמו?',
+     o:['"וַתְּכַבֵּד אֶת בָּנֶיךָ מִמֶּנִּי" – כיבד את בניו יותר מאשר את ה׳, ולא עצר אותם','שהוא גנב בעצמו מהקורבנות','שהוא לא בירך את חנה','שהוא לא הכניס את שמואל למשכן'],
+     ex:'עלי הוכיח את בניו רק במילים ונתן להם להמשיך לשרת כהנים. לכן ה׳ אומר לו: "ותכבד את בניך ממני".', ref:'פרק ב׳, פסוק כ״ט'},
+    {t:'match', q:'התאם כל חלק בעונש לפירוש שלו:', heads:['העונש בפסוק','מה זה אומר'],
+     pairs:[['"וְגָדַעְתִּי אֶת זְרֹעֲךָ"','ה׳ יפסיק את הכוח של הכהונה בבית עלי'],['"וְהִבַּטְתָּ צַר מָעוֹן"','הבית שלהם יהיה דחוק וצפוף'],['"וְלֹא יִהְיֶה זָקֵן בְּבֵיתְךָ"','אף אחד במשפחה לא יזכה לזקנה ולכבוד'],['"לְכַלּוֹת אֶת עֵינֶיךָ וְלַאֲדִיב אֶת נַפְשֶׁךָ"','בני המשפחה יעבדו במקדש בעבודות נחותות ויתעצבו'],['"וְכָל מַרְבִּית בֵּיתְךָ יָמוּתוּ אֲנָשִׁים"','בני המשפחה ימותו צעירים, כשכוחם עוד במלואו'],['"בְּיוֹם אֶחָד יָמוּתוּ שְׁנֵיהֶם"','האות: חפני ופנחס ימותו באותו יום']],
+     ex:'איש האלוהים מפרט את העונש לבית עלי: סוף הכוח והכבוד, בית צפוף, מוות בגיל צעיר, עבודות נחותות – והאות: מות שני הבנים ביום אחד.', ref:'פרק ב׳, פסוקים ל״א–ל״ד'},
+    {t:'mc', q:'מה יהיה ה"אות" (הסימן) לכך שהעונש יתקיים?',
+     o:['שני בניו, חפני ופנחס, ימותו ביום אחד','המשכן בשילה יישרף','עלי יתעוור','שמואל יעזוב את שילה'],
+     ex:'"וְזֶה לְּךָ הָאוֹת אֲשֶׁר יָבֹא אֶל שְׁנֵי בָנֶיךָ אֶל חָפְנִי וּפִינְחָס: בְּיוֹם אֶחָד יָמוּתוּ שְׁנֵיהֶם".', ref:'פרק ב׳, פסוק ל״ד'},
+    {t:'mc', q:'למה "וְלֹא יִהְיֶה זָקֵן בְּבֵיתְךָ כָּל הַיָּמִים" הוא עונש קשה?',
+     o:['כי זקנה נחשבת ברכה – ואף אחד מבית עלי לא יזכה להגיע לזקנה ולכבוד','כי זקנים לא יכולים לעבוד במשכן','כי עלי רצה להישאר צעיר','כי זקנים לא יכולים להיות כהנים'],
+     ex:'זקנה היא ברכה. לכן הפורענות הקשה לבית עלי כוללת את העונש "ולא יהיה זקן בביתך כל הימים" – בני המשפחה ימותו צעירים.', ref:'פרק ב׳, פסוקים ל״א–ל״ב'},
+    {t:'mc', q:'מה פירוש "כִּי מְכַבְּדַי אֲכַבֵּד וּבֹזַי יֵקָלּוּ"?',
+     o:['את מי שמכבד אותי – אכבד, ומי שמבזה אותי – יושפל','מי שמכבד את הוריו יאריך ימים','ה׳ מכבד רק את הכהנים','כל מי שיבוא למשכן יקבל כבוד'],
+     ex:'ה׳ מסביר את העונש: הבטחתי שבית עלי ישרת לפניי לעולם, אבל מי שמבזה אותי – לא יקבל כבוד.', ref:'פרק ב׳, פסוק ל׳'},
+    {t:'tf', s:'העונש פוגע רק בחפני ובפנחס, ולא בשאר המשפחה של עלי.', a:false,
+     ex:'"וְגָדַעְתִּי אֶת זְרֹעֲךָ וְאֶת זְרֹעַ בֵּית אָבִיךָ" – העונש פוגע בכל בית עלי, לדורות. מות חפני ופנחס ביום אחד הוא רק האות (הסימן).', ref:'פרק ב׳, פסוקים ל״א–ל״ד'},
+    {t:'fill', q:'השלם את הפסוקים:',
+     parts:['כִּי ',['מְכַבְּדַי','אוֹהֲבַי','עֲבָדַי'],' אֲכַבֵּד, וּבֹזַי ',['יֵקָלּוּ','יָמוּתוּ','יְבֹרָכוּ'],'.','\n','וְזֶה לְּךָ הָאוֹת אֲשֶׁר יָבֹא אֶל שְׁנֵי בָנֶיךָ אֶל חָפְנִי וּפִינְחָס: בְּיוֹם ',['אֶחָד','הַשַּׁבָּת','הַכִּפּוּרִים'],' יָמוּתוּ ',['שְׁנֵיהֶם','כֻּלָּם','בָּנָיו'],'.'],
+     ex:'ה׳ מכבד את מכבדיו, ומי שמבזה אותו – נקלה. האות: שני הבנים ימותו ביום אחד.', ref:'פרק ב׳, פסוקים ל׳, ל״ד'},
+    {t:'mc', q:'מה מבטיח ה׳ לעשות במקום בית עלי?',
+     o:['"וַהֲקִימֹתִי לִי כֹּהֵן נֶאֱמָן" – להקים כהן נאמן שיעשה כרצונו','להחריב את שילה ולא למנות יותר כהנים','למנות את אלקנה לכהן גדול','לסלוח לבני עלי אם יחזרו בתשובה'],
+     ex:'"וַהֲקִימֹתִי לִי כֹּהֵן נֶאֱמָן, כַּאֲשֶׁר בִּלְבָבִי וּבְנַפְשִׁי יַעֲשֶׂה" – במקום הכהנים המושחתים יבוא כהן נאמן.', ref:'פרק ב׳, פסוק ל״ה'},
+    {t:'mc', q:'מה יקרה למי שיישאר מבית עלי?',
+     o:['יבוא להתחנן לכהן החדש שייתן לו עבודה קטנה, כדי שיהיה לו פת לחם','יהיה עשיר ומכובד','ימונה למלך','יעבור לגור במצרים'],
+     ex:'"סְפָחֵנִי נָא אֶל אַחַת הַכְּהֻנּוֹת לֶאֱכֹל פַּת לָחֶם" – מי שלקחו בכוח את הבשר של העם, הצאצאים שלהם יתחננו לפת לחם.', ref:'פרק ב׳, פסוק ל״ו'},
+    {t:'error', q:'קרא את הסיכום ומצא את הטעויות:',
+     text:'בני עלי, חפני {ושמואל|ופנחס}, היו בני בליעל. הם דרשו מהזובחים בשר {מבושל|חי} עוד לפני הקטרת החלב, ואיימו לקחת אותו {בתחינה|בחזקה}. עלי הזקן שמע על מעשיהם והוכיח אותם, אבל הם {שמעו|לא שמעו} בקולו. איש האלוהים הודיע לעלי שהאות לעונש יהיה ששני בניו ימותו {בשבוע|ביום} אחד, ושה׳ יקים במקומם כהן {עשיר|נאמן}.',
+     ex:'חפני ופנחס; דרשו בשר חי; איימו לקחת בחזקה; לא שמעו לאביהם; ימותו ביום אחד; ה׳ יקים כהן נאמן.', ref:'פרק ב׳, פסוקים י״ב–ל״ה'}
+  ]
+},
+{
+  id:'g', letter:'ז', title:'תכנית אלוהית', range:'"וַה׳ סָגַר רַחְמָהּ"; "כִּי חָפֵץ ה׳ לַהֲמִיתָם"',
+  qs:[
+    {t:'mc', q:'"וַה׳ סָגַר רַחְמָהּ" – מה מלמדות המילים האלה?',
+     o:['שהעקרות של חנה הייתה חלק מתכנית אלוהית – ה׳ הוא שגרם לה','שחנה הייתה חולה במחלה רגילה','שפנינה גרמה לכך','שאלקנה לא רצה ילדים'],
+     ex:'הכתוב מדגיש פעמיים (פסוקים ה׳ ו־ו׳) שה׳ סגר את רחמה: חנה עקרה על פי תכנית אלוהית.', ref:'פרק א׳, פסוקים ה׳–ו׳'},
+    {t:'mc', q:'מה הייתה המטרה של התכנית האלוהית בסיפור של חנה?',
+     o:['ששמואל ייוולד אחרי תפילה ונדר – ויוקדש לשירות ה׳ כל ימי חייו','שחנה תעזוב את אלקנה','שפנינה תיענש','שעלי ימנה את אלקנה לכהן'],
+     ex:'בגלל הכאב, חנה התפללה ונדרה. כך נולד שמואל כ"בן של תפילה", שמוקדש לה׳ מלידתו – ומוכן להיות מנהיג בדור שבו הכהנים מושחתים.'},
+    {t:'mc', q:'"וְלֹא יִשְׁמְעוּ לְקוֹל אֲבִיהֶם, כִּי חָפֵץ ה׳ לַהֲמִיתָם" – מה פירוש המילים?',
+     o:['בני עלי לא שמעו לאביהם, כי ה׳ כבר החליט להעניש אותם במוות על חטאיהם','ה׳ רצה שבני עלי יחיו לנצח','בני עלי לא שמעו כי היו חירשים','עלי רצה להמית את בניו'],
+     ex:'"חפץ" = רצה. החטאים של בני עלי היו כל כך גדולים, שה׳ כבר גזר את דינם – ולכן התוכחה של עלי לא הועילה.', ref:'פרק ב׳, פסוק כ״ה'},
+    {t:'tf', s:'לפי הסיפור, העקרות של חנה הייתה מקרית ולא הייתה לה שום משמעות.', a:false,
+     ex:'"וַה׳ סָגַר רַחְמָהּ" – העקרות הייתה חלק מתכנית אלוהית שהובילה ללידת שמואל.'},
+    {t:'mc', q:'מה הקשר בין שתי ה"תכניות" – "וַה׳ סָגַר רַחְמָהּ" ו"כִּי חָפֵץ ה׳ לַהֲמִיתָם"?',
+     o:['שתיהן מכינות את הדרך: שמואל נולד ומוקדש לה׳, ובית עלי המושחת ייענש – וכך שמואל יוכל להנהיג במקומם','אין ביניהן שום קשר','בשתיהן ה׳ מעניש את חנה','בשתיהן עלי מקבל שכר'],
+     ex:'ה׳ "מנהל" את הסיפור מאחורי הקלעים: מצד אחד מכין מנהיג חדש וטהור (שמואל), ומצד שני מסלק את ההנהגה המושחתת (בית עלי).'},
+    {t:'fill', q:'השלם את הפסוקים:',
+     parts:['וּלְחַנָּה יִתֵּן מָנָה אַחַת אַפָּיִם, כִּי אֶת חַנָּה אָהֵב, וַה׳ ',['סָגַר','פָּתַח','בֵּרַךְ'],' רַחְמָהּ.','\n','וְלֹא יִשְׁמְעוּ לְקוֹל ',['אֲבִיהֶם','שְׁמוּאֵל','הָעָם'],', כִּי ',['חָפֵץ','אָמַר','שָׁכַח'],' ה׳ ',['לַהֲמִיתָם','לְהַצִּילָם','לְבָרְכָם'],'.'],
+     ex:'שני הפסוקים של "התכנית האלוהית": ה׳ סגר את רחמה של חנה, וה׳ חפץ להמית את בני עלי.', ref:'פרק א׳, פסוק ה׳; פרק ב׳, פסוק כ״ה'}
+  ]
+},
+{
+  id:'h', letter:'ח', title:'מילים חדשות', range:'אוצר מילים משני הפרקים',
+  qs:[
+    {t:'match', q:'התאם כל מילה לפירוש שלה:', heads:['מילה','פירוש'],
+     pairs:[['עקרה','אישה שאינה יכולה ללדת'],['רחם','האיבר בגוף האישה שבו העובר מתפתח'],['צרתה','האישה השנייה של הבעל'],['מנה אחת אפיים','מנה כפולה'],['מימים ימימה','מדי שנה בשנה'],['מרת נפש','עצובה ומרירה מאוד']],
+     ex:'כדאי לחזור על המילים האלה – הן מופיעות בפרק א׳ ומופיעות הרבה במבחנים.'},
+    {t:'match', q:'התאם כל מילה לפירוש שלה:', heads:['מילה','פירוש'],
+     pairs:[['קשת רוח','במצוקה, שליבה כבד עליה'],['נגמל','הפסיק לינוק מאמו'],['מורה (לא יעלה על ראשו)','תער – לא יספרו את שערו'],['בני בליעל','אנשים רעים ומושחתים'],['בחזקה','בכוח'],['נאצו','ביזו, זלזלו']],
+     ex:'מילים מפרק א׳ (קשת רוח, נגמל, מורה) ומפרק ב׳ (בני בליעל, בחזקה, נאצו).'},
+    {t:'mc', q:'"וְכִעֲסַתָּה צָרָתָהּ" – מי היא "צרתה" של חנה?',
+     o:['פנינה – האישה השנייה של אלקנה','אמא של חנה','אחותה של חנה','המשרתת של חנה'],
+     ex:'"צרה" = האישה השנייה של הבעל. פנינה הייתה צרתה של חנה.', ref:'פרק א׳, פסוק ו׳'},
+    {t:'mc', q:'"וֵאלֹהֵי יִשְׂרָאֵל יִתֵּן אֶת שֵׁלָתֵךְ" – מה פירוש "שֵׁלָתֵךְ"?',
+     o:['הבקשה שלך','השלום שלך','השמלה שלך','הנדר שלך'],
+     ex:'"שלתך" = שאלתך, הבקשה שלך. מאותו שורש – ש־א־ל – כמו "שמואל".', ref:'פרק א׳, פסוק י״ז'},
+    {t:'mc', q:'"כִּי פָקַד ה׳ אֶת חַנָּה" – מה פירוש "פָקַד"?',
+     o:['זכר אותה ונתן לה את מה שביקשה (ילדים)','ספר אותה במפקד','ציווה עליה','העניש אותה'],
+     ex:'"פקד" כאן = זכר ונתן. ה׳ זכר את חנה, והיא ילדה עוד שלושה בנים ושתי בנות.', ref:'פרק ב׳, פסוק כ״א'},
+    {t:'mc', q:'מהו "נדר"?',
+     o:['הבטחה לה׳ לעשות משהו – בדרך כלל אם ה׳ ימלא בקשה','סוג של קורבן','תפילה שקטה בלב','ברכה שהכהן נותן'],
+     ex:'חנה "נדרה נדר": היא הבטיחה לה׳ שאם ייתן לה בן, היא תקדיש אותו לשירות ה׳.'}
+  ]
+},
+{
+  id:'i', letter:'ט', title:'שאלות פתוחות – כמו במבחן', range:'כתיבה ובדיקה עצמית',
+  qs:[
+    {t:'open', q:'תאר את המתח המשפחתי בבית של אלקנה. מי הדמויות ומה הבעיה?',
+     pts:['לאלקנה שתי נשים: חנה ופנינה','לפנינה יש ילדים ולחנה אין – "וַה׳ סָגַר רַחְמָהּ"','אלקנה אוהב את חנה ונותן לה "מנה אחת אפיים" (מנה כפולה)','פנינה (צרתה) מכעיסה את חנה בכל שנה כשהם עולים לשילה','חנה בוכה ולא אוכלת, ואלקנה מנסה לנחם: "הֲלוֹא אָנֹכִי טוֹב לָךְ מֵעֲשָׂרָה בָּנִים"']},
+    {t:'open', q:'מהם שני החלקים של הנדר של חנה? הבא ציטוט לכל חלק.',
+     pts:['בקשה – שה׳ ייתן לה בן: "וְנָתַתָּה לַאֲמָתְךָ זֶרַע אֲנָשִׁים"','הבטחה – הבן יוקדש לה׳: "וּנְתַתִּיו לַה׳ כָּל יְמֵי חַיָּיו"','"וּמוֹרָה לֹא יַעֲלֶה עַל רֹאשׁוֹ" – תער לא יעבור על ראשו','מקור הנדר: פרק א׳, פסוק י״א']},
+    {t:'open', q:'כיצד קיימה חנה את הנדר שלה?',
+     pts:['חנה חיכתה בבית עד שהנער נגמל','היא עלתה לשילה עם שמואל ועם מנחה: שלושה פרים, איפת קמח ונבל יין','היא הביאה אותו לעלי והזכירה לו שהיא האישה שהתפללה שם','"וְגַם אָנֹכִי הִשְׁאִלְתִּהוּ לַה׳ כָּל הַיָּמִים"','שמואל נשאר במשכן לשרת את ה׳ לפני עלי הכהן']},
+    {t:'open', q:'פרט שלושה חטאים של בני עלי, והסבר למה הם חמורים במיוחד.',
+     pts:['לקחו כל מה שעלה במזלג – יותר ממה שמגיע לכהנים','דרשו בשר חי, לפני הקטרת החלב','איימו לקחת בכוח: "וְאִם לֹא – לָקַחְתִּי בְחָזְקָה"','חמור כי הם כהנים – אנשי ציבור שצריכים לשמש דוגמה (שחיתות שלטונית)','חטאו גם נגד העם וגם נגד ה׳: "וַתְּהִי חַטַּאת הַנְּעָרִים גְּדוֹלָה מְאֹד"']},
+    {t:'open', q:'השווה בין שמואל לבני עלי: ציין שני הבדלים, והסבר למה הכתוב מספר עליהם לסירוגין.',
+     pts:['שמואל "מְשָׁרֵת אֶת ה׳", ובני עלי "לֹא יָדְעוּ אֶת ה׳"','שמואל "הֹלֵךְ וְגָדֵל וָטוֹב גַּם עִם ה׳ וְגַם עִם אֲנָשִׁים", ובני עלי חוטאים נגד ה׳ ונגד העם','שמואל ילד שמשרת בצניעות ("אֵפוֹד בָּד"), ובני עלי כהנים מבוגרים שמנצלים את מעמדם','המעבר הלוך ושוב מדגיש את הניגוד ורומז ששמואל יחליף את בית עלי']},
+    {t:'open', q:'מהו העונש של בית עלי, מה הסיבה לו ומה האות?',
+     pts:['הסיבה: "וַתְּכַבֵּד אֶת בָּנֶיךָ מִמֶּנִּי"; "כִּי מְכַבְּדַי אֲכַבֵּד וּבֹזַי יֵקָלּוּ"','"וְגָדַעְתִּי אֶת זְרֹעֲךָ" – סוף לכוח ולכבוד של בית עלי','"וְלֹא יִהְיֶה זָקֵן בְּבֵיתְךָ" – בני המשפחה ימותו צעירים','מי שיישאר יתחנן לעבודה קטנה ול"פַּת לָחֶם"','האות: חפני ופנחס ימותו ביום אחד']},
+    {t:'open', q:'הסבר את הביטויים "וַה׳ סָגַר רַחְמָהּ" ו"כִּי חָפֵץ ה׳ לַהֲמִיתָם". איך הם מראים תכנית אלוהית?',
+     pts:['"וה׳ סגר רחמה" – העקרות של חנה באה מה׳, לא במקרה','בגלל הצער חנה התפללה ונדרה, וכך נולד שמואל – מוקדש לה׳','"כי חפץ ה׳ להמיתם" – ה׳ כבר החליט להעניש את בני עלי, ולכן הם לא שמעו לאביהם','שתי התכניות מובילות לאותה מטרה: ההנהגה המושחתת של בית עלי תוחלף, ושמואל יהיה המנהיג החדש']}
+  ]
+}
+];
+
+var TOPICS = ['משפחתו של אלקנה','נדר חנה','מסירת שמואל למשכן בשילה','חטאי בני עלי','השוואה בין שמואל לבני עלי','עונשו של בית עלי','תכנית אלוהית: "וה׳ סגר רחמה"; "כי חפץ ה׳ להמיתם"'];
+
+var TYPE = {
+  mc:['בחירה מרובה',''],
+  tf:['נכון או לא נכון?',''],
+  multi:['סמן את כל התשובות הנכונות','שים לב: יש יותר מתשובה נכונה אחת.'],
+  match:['התאמה','לחץ על פריט בטור הימני ואחר כך על הפירוש שלו בטור השמאלי. לחיצה על פריט שכבר מותאם מבטלת את הזוג.'],
+  order:['סידור לפי הסדר','לחץ על הפריטים לפי הסדר – מהראשון לאחרון. לחיצה נוספת על פריט מבטלת אותו.'],
+  fill:['השלמת פסוק','בחר את המילה החסרה בכל מקום ריק.'],
+  sort:['מיון','לכל משפט – בחר לאיזו קבוצה הוא שייך.'],
+  who:['מי אמר?','בחר מי אמר כל משפט.'],
+  error:['מצא את הטעויות',''],
+  open:['שאלה פתוחה – כמו במבחן','נסה לענות לבד (בכתב או בעל פה), ורק אז לחץ על "הצג תשובה".']
+};
+var NUDGE = {mc:'בחר תשובה',tf:'בחר נכון או לא נכון',multi:'סמן לפחות תשובה אחת',match:'יש להתאים את כל הזוגות',order:'סדר את כל הפריטים',fill:'השלם את כל המקומות הריקים',sort:'מיין את כל המשפטים',who:'בחר דובר לכל משפט',error:'סמן לפחות מילה אחת'};
+var PRAISE = ['נכון!','מצוין!','כל הכבוד!','בדיוק!','יפה מאוד!'];
+var OOPS = ['לא בדיוק','לא נכון – אבל עכשיו תזכור','אופס, לא נכון'];
+var COLORS = ['#2f6db5','#c0612b','#2e8a57','#8a4bb0','#b8862a','#c23b6a','#2a8c8c','#6b6f2a'];
+var STORE = 'shmuel-a-quiz-v1';
+
+/* ===================== utilities ===================== */
+var app = document.getElementById('app');
+function h(tag, attrs){
+  var e = document.createElement(tag), k, v, i;
+  if (attrs) for (k in attrs){ v = attrs[k]; if (v == null || v === false) continue;
+    if (k === 'class') e.className = v;
+    else if (k === 'html') e.innerHTML = v;
+    else if (k.slice(0,2) === 'on') e.addEventListener(k.slice(2), v);
+    else e.setAttribute(k, v === true ? '' : v); }
+  for (i = 2; i < arguments.length; i++) add(e, arguments[i]);
+  return e;
+}
+function add(e, kid){
+  if (kid == null || kid === false) return;
+  if (Array.isArray(kid)) { kid.forEach(function(k){ add(e, k); }); return; }
+  e.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
+}
+var NIK = /[֑-ׇ]/;
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function fmt(s){
+  var found = false;
+  var out = esc(s).replace(/"([^"]+)"/g, function(m, inner){
+    if (NIK.test(inner)) { found = true; return '<span class="v">"' + inner + '"</span>'; }
+    return m;
+  });
+  if (!found && NIK.test(s)) out = '<span class="v">' + out + '</span>';
+  return out;
+}
+function shuffle(a){ a = a.slice(); for (var i = a.length - 1; i > 0; i--){ var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+function pick(a){ return a[Math.floor(Math.random() * a.length)]; }
+function lis(a){ var t = []; a.forEach(function(x){ var lo = 0, hi = t.length; while (lo < hi){ var m = (lo + hi) >> 1; if (t[m] < x) lo = m + 1; else hi = m; } t[lo] = x; }); return t.length; }
+function loadStore(){ try { return JSON.parse(localStorage.getItem(STORE)) || {}; } catch(e){ return {}; } }
+function saveStore(o){ try { localStorage.setItem(STORE, JSON.stringify(o)); } catch(e){} }
+function pctColor(p){ return p >= 85 ? 'var(--ok)' : p >= 60 ? 'var(--warn)' : 'var(--bad)'; }
+function allItems(){ var out = []; SECTIONS.forEach(function(s){ s.qs.forEach(function(q){ out.push({sec:s, q:q}); }); }); return out; }
+
+/* ===================== question renderers ===================== */
+var R = {};
+
+R.mc = function(q, box){
+  var opts = shuffle(q.o.map(function(t, i){ return {t:t, ok:i === 0}; }));
+  var sel = -1;
+  var btns = opts.map(function(o, k){
+    return h('button', {class:'opt', type:'button', html:fmt(o.t), onclick:function(){
+      sel = k; btns.forEach(function(b, j){ b.classList.toggle('sel', j === k); });
+    }});
+  });
+  box.append(h('div', {class:'opts'}, btns));
+  return { check:function(){
+    if (sel < 0) return null;
+    btns.forEach(function(b, j){ b.disabled = true; b.classList.remove('sel');
+      if (opts[j].ok) b.classList.add('ok'); else if (j === sel) b.classList.add('bad'); else b.classList.add('dim'); });
+    return opts[sel].ok ? 1 : 0;
+  }};
+};
+
+R.tf = function(q, box){
+  var sel = null;
+  function mk(val, label, icon){
+    return h('button', {class:'opt', type:'button', onclick:function(){ sel = val; b1.classList.toggle('sel', val === true); b2.classList.toggle('sel', val === false); }},
+      h('span', {class:'tfi', 'aria-hidden':'true'}, icon), label);
+  }
+  var b1 = mk(true, 'נכון', '✓'), b2 = mk(false, 'לא נכון', '✗');
+  box.append(h('div', {class:'statement', html:fmt(q.s)}), h('div', {class:'tfrow'}, b1, b2));
+  return { check:function(){
+    if (sel === null) return null;
+    [b1, b2].forEach(function(b){ b.disabled = true; b.classList.remove('sel'); });
+    (q.a ? b1 : b2).classList.add('ok');
+    if (sel !== q.a) (sel ? b1 : b2).classList.add('bad'); else (q.a ? b2 : b1).classList.add('dim');
+    return sel === q.a ? 1 : 0;
+  }};
+};
+
+R.multi = function(q, box){
+  var opts = shuffle(q.o.map(function(p){ return {t:p[0], ok:p[1]}; }));
+  var on = {};
+  var btns = opts.map(function(o, k){
+    var b = h('button', {class:'opt', type:'button', 'aria-pressed':'false', onclick:function(){
+      on[k] = !on[k]; b.classList.toggle('sel', !!on[k]); b.setAttribute('aria-pressed', on[k] ? 'true' : 'false');
+    }}, h('span', {class:'box'}), h('span', {html:fmt(o.t)}));
+    return b;
+  });
+  box.append(h('div', {class:'opts'}, btns));
+  return { check:function(){
+    var any = Object.keys(on).some(function(k){ return on[k]; });
+    if (!any) return null;
+    var good = 0, bad = 0, total = opts.filter(function(o){ return o.ok; }).length;
+    btns.forEach(function(b, k){
+      b.disabled = true; var o = opts[k];
+      if (o.ok && on[k]) { b.classList.add('ok'); good++; }
+      else if (o.ok) { b.classList.remove('sel'); b.classList.add('miss'); b.append(h('span', {class:'tag', style:'color:var(--ok)'}, 'פספסת')); }
+      else if (on[k]) { b.classList.add('bad'); bad++; }
+      else b.classList.add('dim');
+    });
+    return Math.max(0, (good - bad) / total);
+  }};
+};
+
+R.match = function(q, box){
+  var n = q.pairs.length;
+  var terms = shuffle(q.pairs.map(function(p, i){ return {t:p[0], i:i}; }));
+  var means = shuffle(q.pairs.map(function(p, i){ return {t:p[1], i:i}; }));
+  var tm = []; for (var z = 0; z < n; z++) tm.push(-1);
+  var act = null, locked = false;
+  var tB = terms.map(function(o, k){ return h('button', {class:'mitem term', type:'button', onclick:function(){ clickT(k); }}, h('span', {class:'badge'}, String(k + 1)), h('span', {class:'mtxt', html:fmt(o.t)})); });
+  var mB = means.map(function(o, k){ return h('button', {class:'mitem mean', type:'button', onclick:function(){ clickM(k); }}, h('span', {class:'badge'}), h('span', {class:'mtxt', html:fmt(o.t)})); });
+  function owner(m){ return tm.indexOf(m); }
+  function pair(t, m){ var ow = owner(m); if (ow >= 0) tm[ow] = -1; tm[t] = m; }
+  function clickT(k){
+    if (locked) return;
+    if (tm[k] >= 0) { tm[k] = -1; act = null; return paint(); }
+    if (act && act.s === 'm') { pair(k, act.k); act = null; }
+    else act = (act && act.s === 't' && act.k === k) ? null : {s:'t', k:k};
+    paint();
+  }
+  function clickM(m){
+    if (locked) return;
+    var ow = owner(m);
+    if (ow >= 0) { tm[ow] = -1; act = null; return paint(); }
+    if (act && act.s === 't') { pair(act.k, m); act = null; }
+    else act = (act && act.s === 'm' && act.k === m) ? null : {s:'m', k:m};
+    paint();
+  }
+  function paint(){
+    tB.forEach(function(b, k){
+      var c = COLORS[k % COLORS.length], bd = b.querySelector('.badge');
+      b.classList.toggle('active', !!act && act.s === 't' && act.k === k);
+      b.classList.toggle('paired', tm[k] >= 0);
+      bd.style.background = tm[k] >= 0 ? c : ''; bd.style.borderColor = tm[k] >= 0 ? c : '';
+    });
+    mB.forEach(function(b, m){
+      var ow = owner(m), bd = b.querySelector('.badge');
+      b.classList.toggle('active', !!act && act.s === 'm' && act.k === m);
+      b.classList.toggle('paired', ow >= 0);
+      bd.textContent = ow >= 0 ? String(ow + 1) : '';
+      var c = ow >= 0 ? COLORS[ow % COLORS.length] : '';
+      bd.style.background = c; bd.style.borderColor = c;
+    });
+  }
+  var heads = q.heads || ['ביטוי','פירוש'];
+  box.append(h('div', {class:'match'},
+    h('div', {class:'mcol'}, h('div', {class:'mhead'}, heads[0]), tB),
+    h('div', {class:'mcol'}, h('div', {class:'mhead'}, heads[1]), mB)));
+  paint();
+  return { check:function(){
+    if (tm.some(function(x){ return x < 0; })) return null;
+    locked = true; var c = 0;
+    tB.forEach(function(b, k){
+      var m = tm[k], ok = means[m].i === terms[k].i;
+      b.disabled = true; mB[m].disabled = true;
+      b.classList.add(ok ? 'ok' : 'bad'); mB[m].classList.add(ok ? 'ok' : 'bad');
+      if (ok) c++; else b.append(h('span', {class:'fixline', html:'✓ ' + fmt(q.pairs[terms[k].i][1])}));
+    });
+    return c / n;
+  }};
+};
+
+R.order = function(q, box){
+  var n = q.items.length;
+  var items = shuffle(q.items.map(function(t, i){ return {t:t, i:i}; }));
+  var seq = [], locked = false;
+  var btns = items.map(function(o, k){
+    return h('button', {class:'oitem', type:'button', onclick:function(){
+      if (locked) return; var p = seq.indexOf(k); if (p >= 0) seq.splice(p, 1); else seq.push(k); paint();
+    }}, h('span', {class:'badge'}), h('span', {class:'otxt', html:fmt(o.t)}));
+  });
+  function paint(){ btns.forEach(function(b, k){ var p = seq.indexOf(k); b.classList.toggle('picked', p >= 0); b.querySelector('.badge').textContent = p >= 0 ? String(p + 1) : ''; }); }
+  var reset = h('button', {class:'btn ghost small', type:'button', onclick:function(){ if (locked) return; seq = []; paint(); }}, 'התחל מחדש');
+  box.append(h('div', {class:'olist'}, btns), h('div', {class:'subactions'}, reset));
+  return {
+    check:function(){
+      if (seq.length < n) return null;
+      locked = true; reset.disabled = true;
+      var user = seq.map(function(k){ return items[k].i; });
+      seq.forEach(function(k, pos){
+        var b = btns[k]; b.disabled = true; b.classList.remove('picked');
+        if (items[k].i === pos) b.classList.add('ok');
+        else { b.classList.add('bad'); b.append(h('span', {class:'tag', style:'color:var(--bad)'}, 'המקום הנכון: ' + (items[k].i + 1))); }
+      });
+      return lis(user) / n;
+    },
+    detail:function(){ return '<div class="corder"><b>הסדר הנכון:</b><ol>' + q.items.map(function(t){ return '<li>' + fmt(t) + '</li>'; }).join('') + '</ol></div>'; }
+  };
+};
+
+R.fill = function(q, box){
+  var sels = [];
+  var p = h('div', {class:'verse fill'});
+  q.parts.forEach(function(part){
+    if (part === '\n') { p.append(h('br')); return; }
+    if (typeof part === 'string') { p.append(document.createTextNode(part)); return; }
+    var s = h('select', {class:'blank', 'aria-label':'מילה חסרה'}, h('option', {value:''}, '— בחר —'),
+      shuffle(part).map(function(o){ return h('option', {value:o}, o); }));
+    s.setAttribute('data-a', part[0]); sels.push(s); p.append(s);
+  });
+  box.append(p);
+  return { check:function(){
+    if (sels.some(function(s){ return !s.value; })) return null;
+    var c = 0;
+    sels.forEach(function(s){
+      s.disabled = true; var a = s.getAttribute('data-a');
+      if (s.value === a) { s.classList.add('ok'); c++; }
+      else { s.classList.add('bad'); s.after(h('span', {class:'fix'}, ' (' + a + ') ')); }
+    });
+    return c / sels.length;
+  }};
+};
+
+R.sort = function(q, box){
+  var items = shuffle(q.items.map(function(p){ return {t:p[0], c:p[1]}; }));
+  var val = items.map(function(){ return -1; });
+  var rows = items.map(function(o, k){
+    var bs = q.cats.map(function(c, ci){
+      return h('button', {type:'button', onclick:function(){ val[k] = ci; bs.forEach(function(b, j){ b.classList.toggle('on', j === ci); }); }}, c);
+    });
+    var row = h('div', {class:'srow'}, h('div', {class:'stxt', html:fmt(o.t)}), h('div', {class:'seg', role:'group'}, bs));
+    row._bs = bs; return row;
+  });
+  box.append(h('div', {class:'slist'}, rows));
+  return { check:function(){
+    if (val.some(function(v){ return v < 0; })) return null;
+    var c = 0;
+    rows.forEach(function(r, k){
+      r._bs.forEach(function(b){ b.disabled = true; });
+      if (val[k] === items[k].c) { r.classList.add('ok'); c++; }
+      else { r.classList.add('bad'); r.append(h('div', {class:'fixline'}, '✓ שייך ל: ' + q.cats[items[k].c])); }
+    });
+    return c / items.length;
+  }};
+};
+
+R.who = function(q, box){
+  var items = shuffle(q.quotes.map(function(p){ return {t:p[0], a:p[1]}; }));
+  var sels = [];
+  var cards = items.map(function(o){
+    var s = h('select', {class:'blank', 'aria-label':'מי אמר?'}, h('option', {value:''}, 'מי אמר?'),
+      q.speakers.map(function(sp){ return h('option', {value:sp}, sp); }));
+    s.setAttribute('data-a', o.a); sels.push(s);
+    var card = h('div', {class:'wq'}, h('div', {class:'wtxt'}, '"' + o.t + '"'), s);
+    s._card = card; return card;
+  });
+  box.append(h('div', {class:'wlist'}, cards));
+  return { check:function(){
+    if (sels.some(function(s){ return !s.value; })) return null;
+    var c = 0;
+    sels.forEach(function(s){
+      s.disabled = true; var a = s.getAttribute('data-a');
+      if (s.value === a) { s._card.classList.add('ok'); c++; }
+      else { s._card.classList.add('bad'); s._card.append(h('div', {class:'fixline'}, '✓ אמר/ה: ' + a)); }
+    });
+    return c / sels.length;
+  }};
+};
+
+function parseErr(text){
+  var toks = [], re = /\{([^|}]+)\|([^}]+)\}([.,:;!?]*)|(\S+)/g, m;
+  while ((m = re.exec(text))) {
+    if (m[4] !== undefined) toks.push({w:m[4]});
+    else toks.push({w:m[1], fix:m[2], err:true, punct:m[3]});
+  }
+  return toks;
+}
+R.error = function(q, box){
+  var toks = parseErr(q.text);
+  var marked = {}, locked = false;
+  var p = h('div', {class:'errtext'});
+  var spans = toks.map(function(t, k){
+    var b = h('button', {class:'tok', type:'button', onclick:function(){ if (locked) return; marked[k] = !marked[k]; b.classList.toggle('marked', !!marked[k]); }}, t.w);
+    p.append(b); if (t.punct) p.append(t.punct); p.append(' ');
+    return b;
+  });
+  box.append(p);
+  return { check:function(){
+    var any = Object.keys(marked).some(function(k){ return marked[k]; });
+    if (!any) return null;
+    locked = true;
+    var nErr = 0, found = 0, wrong = 0;
+    toks.forEach(function(t, k){
+      var b = spans[k]; b.disabled = true; b.classList.remove('marked');
+      if (t.err) nErr++;
+      if (t.err && marked[k]) { b.classList.add('found'); found++; b.after(h('span', {class:'fix'}, ' (' + t.fix + ')')); }
+      else if (t.err) { b.classList.add('missed'); b.after(h('span', {class:'fix miss'}, ' (' + t.fix + ')')); }
+      else if (marked[k]) { b.classList.add('wrongmark'); wrong++; }
+    });
+    box.append(h('div', {class:'legend'},
+      h('span', null, h('i', {style:'background:var(--ok-soft);outline:2px solid var(--ok)'}), 'מצאת'),
+      h('span', null, h('i', {style:'background:var(--warn-soft);outline:2px dashed var(--warn)'}), 'פספסת'),
+      wrong ? h('span', null, h('i', {style:'background:var(--bad-soft);outline:2px solid var(--bad)'}), 'סימנת – אבל זה היה נכון') : null));
+    return Math.max(0, (found - wrong) / nErr);
+  }};
+};
+
+R.open = function(q, box){
+  var ta = h('textarea', {class:'ta', rows:'5', placeholder:'כתוב כאן את התשובה שלך (או במחברת)...'});
+  box.append(ta);
+  var cbs = [];
+  return {
+    open:true,
+    check:function(){
+      ta.readOnly = true;
+      var list = h('div', {class:'pts'}, h('div', {class:'pts-h'}, 'תשובה טובה צריכה לכלול – סמן ✓ ליד כל נקודה שכתבת או ידעת:'),
+        q.pts.map(function(pt){ var cb = h('input', {type:'checkbox'}); cbs.push(cb); return h('label', {class:'pt'}, cb, h('span', {html:fmt(pt)})); }));
+      box.append(list);
+      return -1;
+    },
+    finalize:function(){ return cbs.filter(function(c){ return c.checked; }).length / cbs.length; }
+  };
+};
+
+/* ===================== screens ===================== */
+var S = null;
+
+function renderHome(){
+  S = null;
+  app.innerHTML = '';
+  var store = loadStore();
+  var total = allItems().length;
+  var hero = h('section', {class:'hero'},
+    h('div', {class:'kicker'}, 'תנ״ך · כיתה ז׳ · הכנה למבחן'),
+    h('h1', null, 'שמואל א׳, פרקים א׳–ב׳'),
+    h('p', null, 'פרק א׳ במלואו, ופרק ב׳ מפסוק י״א ועד סוף הפרק. ' + total + ' שאלות בעשרה סוגים שונים – עם הסבר אחרי כל תשובה.'),
+    h('div', {class:'scope'}, h('h2', null, 'הנושאים שהמורה ביקשה להתמקד בהם'),
+      h('ul', null, TOPICS.map(function(t){ return h('li', null, t); }))));
+  var modes = h('div', {class:'modes'},
+    h('button', {class:'mode', type:'button', onclick:function(){
+      var pool = shuffle(allItems().filter(function(it){ return it.q.t !== 'open'; })).slice(0, 20);
+      startSession(pool, 'מבחן מהיר');
+    }}, h('b', null, 'מבחן מהיר'), h('span', null, '20 שאלות אקראיות מכל החומר')),
+    h('button', {class:'mode alt', type:'button', onclick:function(){ startSession(allItems(), 'כל השאלות'); }},
+      h('b', null, 'כל השאלות'), h('span', null, total + ' שאלות, לפי סדר הנושאים')));
+  var grid = h('div', {class:'secs'}, SECTIONS.map(function(s){
+    var last = store[s.id];
+    return h('button', {class:'sec', type:'button', onclick:function(){
+      startSession(s.qs.map(function(q){ return {sec:s, q:q}; }), s.title);
+    }}, h('span', {class:'letter'}, s.letter),
+      h('span', null, h('div', {class:'t'}, s.title), h('div', {class:'m', html:fmt(s.range) + ' · ' + s.qs.length + ' שאלות'}),
+        last != null ? h('span', {class:'last'}, 'בפעם הקודמת: ' + last + '%') : null));
+  }));
+  app.append(hero, modes, h('h2', {class:'h-sec'}, 'או תרגל לפי נושא:'), grid,
+    h('p', {class:'tip'}, 'טיפ: לפני התרגול כדאי לקרוא שוב את הפרקים מהספר ואת הסיכומים במחברת. בהצלחה במבחן!'));
+  window.scrollTo(0, 0);
+}
+
+function startSession(list, title){ S = {list:list, i:0, res:[], title:title}; renderQ(); }
+
+function renderQ(){
+  var it = S.list[S.i], q = it.q, sec = it.sec;
+  app.innerHTML = '';
+  var top = h('div', {class:'qtop'},
+    h('button', {class:'link', type:'button', onclick:renderHome}, '→ לתפריט'),
+    h('div', {class:'qcount'}, 'שאלה ' + (S.i + 1) + ' מתוך ' + S.list.length));
+  var bar = h('div', {class:'bar'}, h('span', {style:'width:' + (S.i / S.list.length * 100) + '%'}));
+  var card = h('article', {class:'card'});
+  var tp = TYPE[q.t];
+  card.append(h('div', {class:'qmeta'}, h('span', {class:'chip'}, tp[0]), h('span', {class:'secname'}, sec.letter + '. ' + sec.title)));
+  card.append(h('h2', {class:'prompt', html:fmt(q.q || 'האם המשפט הבא נכון?')}));
+  if (q.v) card.append(h('blockquote', {class:'verse', html:esc(q.v) + (q.vr ? '<cite>(' + esc(q.vr) + ')</cite>' : '')}));
+  var hint = tp[1];
+  if (q.t === 'error') hint = 'בקטע מסתתרות ' + parseErr(q.text).filter(function(t){ return t.err; }).length + ' טעויות. לחץ על כל מילה שגויה (לחיצה נוספת מבטלת).';
+  if (hint) card.append(h('p', {class:'hint'}, hint));
+  var body = h('div', {class:'qbody'}); card.append(body);
+  var api = R[q.t](q, body);
+  var fb = h('div', {'aria-live':'polite'});
+  var nudge = h('span', {class:'nudge', role:'status'});
+  var last = S.i === S.list.length - 1;
+  var btn = h('button', {class:'btn', type:'button'}, q.t === 'open' ? 'הצג תשובה' : 'בדיקה');
+  card.append(fb, h('div', {class:'actions'}, btn, nudge));
+  var stage = 0, score = 0;
+  btn.addEventListener('click', function(){
+    if (stage === 0) {
+      var r = api.check();
+      if (r === null) { nudge.textContent = NUDGE[q.t]; nudge.classList.remove('shake'); void nudge.offsetWidth; nudge.classList.add('shake'); return; }
+      nudge.textContent = ''; stage = 1;
+      if (!api.open) { score = r; fb.append(feedback(q, r, api)); }
+      btn.textContent = last ? 'לסיכום' : 'לשאלה הבאה ←';
+      btn.focus({preventScroll:true});
+      fb.scrollIntoView({behavior:'smooth', block:'nearest'});
+    } else {
+      if (api.open) score = api.finalize();
+      S.res.push({sec:sec, q:q, score:score});
+      S.i++;
+      if (S.i >= S.list.length) renderEnd(); else renderQ();
+    }
+  });
+  app.append(top, bar, card);
+  window.scrollTo(0, 0);
+}
+
+function feedback(q, r, api){
+  var cls, head;
+  if (r >= 0.999) { cls = 'ok'; head = pick(PRAISE); }
+  else if (r > 0) { cls = 'part'; head = 'חלקית נכון (' + Math.round(r * 100) + '%)'; }
+  else { cls = 'bad'; head = pick(OOPS); }
+  var box = h('div', {class:'fb ' + cls}, h('div', {class:'fbh'}, head));
+  if (api.detail && r < 0.999) box.append(h('div', {html:api.detail()}));
+  if (q.ex) box.append(h('p', {class:'ex', html:fmt(q.ex)}));
+  if (q.ref) box.append(h('div', {class:'ref'}, 'מקור: ' + q.ref));
+  return box;
+}
+
+function avg(list){ return list.length ? Math.round(list.reduce(function(a, r){ return a + r.score; }, 0) / list.length * 100) : null; }
+
+function renderEnd(){
+  app.innerHTML = '';
+  var auto = S.res.filter(function(r){ return r.q.t !== 'open'; });
+  var open = S.res.filter(function(r){ return r.q.t === 'open'; });
+  var pct = avg(auto), openPct = avg(open);
+  var main = pct != null ? pct : openPct;
+
+  // remember per-section result
+  var store = loadStore();
+  SECTIONS.forEach(function(s){
+    var rs = S.res.filter(function(r){ return r.sec === s; });
+    if (rs.length === s.qs.length) store[s.id] = avg(rs);
+  });
+  saveStore(store);
+
+  var msg = main >= 90 ? ['מצוין!', 'אתה שולט בחומר – אתה מוכן למבחן.']
+          : main >= 75 ? ['יפה מאוד!', 'עוד קצת חזרה על מה שטעית בו, ואתה שם.']
+          : main >= 55 ? ['בדרך הנכונה', 'כדאי לחזור על הנושאים שטעית בהם ולנסות שוב.']
+          : ['כדאי לחזור על החומר', 'קרא שוב את הפרקים והסיכומים, ואז נסה שוב – זה ישתפר.'];
+  var C = 2 * Math.PI * 54, off = C * (1 - main / 100);
+  var ring = h('div', {class:'ring', html:
+    '<svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="54" fill="none" stroke="var(--line)" stroke-width="12"/>' +
+    '<circle cx="60" cy="60" r="54" fill="none" stroke="' + pctColor(main) + '" stroke-width="12" stroke-linecap="round" stroke-dasharray="' + C.toFixed(1) + '" stroke-dashoffset="' + off.toFixed(1) + '"/></svg>' +
+    '<div class="num">' + main + '%</div>'});
+  var sub = [];
+  if (pct != null) sub.push('ציון בשאלות הסגורות: ' + pct + '% (' + auto.length + ' שאלות)');
+  if (openPct != null) sub.push('שאלות פתוחות (בדיקה עצמית): ' + openPct + '% מנקודות המפתח');
+  var card = h('article', {class:'card'},
+    h('div', {class:'endhead'}, ring, h('div', {class:'endmsg'}, h('h2', null, msg[0]), h('p', null, msg[1]),
+      h('p', {style:'margin-top:6px;font-size:.88rem'}, sub.join(' · ')))));
+
+  // breakdown by section
+  var secs = SECTIONS.filter(function(s){ return S.res.some(function(r){ return r.sec === s; }); });
+  if (secs.length > 1) {
+    card.append(h('div', {class:'bk'}, h('h3', null, 'לפי נושא'), secs.map(function(s){
+      var p = avg(S.res.filter(function(r){ return r.sec === s; }));
+      return h('div', {class:'bkrow'}, h('span', null, s.letter + '. ' + s.title),
+        h('div', {class:'bkbar'}, h('span', {style:'width:' + p + '%;background:' + pctColor(p)})), h('b', null, p + '%'));
+    })));
+  }
+
+  // mistakes
+  var wrong = auto.filter(function(r){ return r.score < 0.999; });
+  if (wrong.length) {
+    card.append(h('div', {class:'mist'}, h('h3', null, 'כדאי לחזור על (' + wrong.length + '):'),
+      wrong.map(function(r){
+        var qt = r.q.q || r.q.s;
+        return h('div', {class:'mitem2'}, h('div', {class:'mq', html:fmt(qt)}), r.q.ex ? h('div', {class:'mx', html:fmt(r.q.ex)}) : null);
+      })));
+  }
+
+  var acts = h('div', {class:'actions'});
+  if (wrong.length) acts.append(h('button', {class:'btn', type:'button', onclick:function(){
+    startSession(shuffle(wrong.map(function(r){ return {sec:r.sec, q:r.q}; })), 'תרגול טעויות');
+  }}, 'תרגל שוב את הטעויות'));
+  var again = S.list.slice(), title = S.title;
+  acts.append(h('button', {class:'btn ghost', type:'button', onclick:function(){ startSession(again, title); }}, 'שוב מההתחלה'));
+  acts.append(h('button', {class:'btn ghost', type:'button', onclick:renderHome}, 'לתפריט'));
+  card.append(acts);
+
+  app.append(h('div', {class:'qtop'}, h('button', {class:'link', type:'button', onclick:renderHome}, '→ לתפריט'), h('div', {class:'qcount'}, 'סיכום')),
+    h('div', {class:'bar'}, h('span', {style:'width:100%'})), card);
+  window.scrollTo(0, 0);
+  if (main >= 85) confetti();
+}
+
+function confetti(){
+  try { if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return; } catch(e){}
+  var c = h('canvas', {class:'confetti'}); document.body.append(c);
+  var d = window.devicePixelRatio || 1, ctx = c.getContext('2d');
+  var W = c.width = innerWidth * d, H = c.height = innerHeight * d;
+  var P = []; for (var i = 0; i < 140; i++) P.push({x:Math.random() * W, y:-Math.random() * H * .5, vx:(Math.random() - .5) * 4 * d, vy:(2 + Math.random() * 4) * d, r:(5 + Math.random() * 6) * d, c:pick(COLORS), a:Math.random() * 6, va:(Math.random() - .5) * .3});
+  var t0 = performance.now();
+  (function f(t){
+    var el = t - t0; ctx.clearRect(0, 0, W, H);
+    P.forEach(function(p){ p.x += p.vx; p.y += p.vy; p.vy += .05 * d; p.a += p.va;
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.a); ctx.globalAlpha = Math.max(0, 1 - el / 3200); ctx.fillStyle = p.c; ctx.fillRect(-p.r / 2, -p.r / 4, p.r, p.r / 2); ctx.restore(); });
+    if (el < 3200) requestAnimationFrame(f); else c.remove();
+  })(t0);
+}
+
+renderHome();
+})();
+</script>
+</body>
+</html>
